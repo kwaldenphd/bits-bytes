@@ -17,9 +17,15 @@ By the end of this lab you will be able to:
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_1.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_1.jpg?raw=true" /></a></p>
+
 "As physical objects, consisting of ‘inscriptions’ (usually binary states of ‘on-ness’ or ‘off-ness’) on carrier media such as computer disks or tapes. (Despite the impression of that they exist in ‘cyberspace’, even online resources must exist on physical carriers somewhere)”
 
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_2.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_2.png?raw=true" /></a></p>
+
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
+
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_3.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_3.png?raw=true" /></a></p>
 
 "As conceptual objects that have meaning to humans, unlike the logical or physical objects that encode them at any particular time. (This is recognisable as the performance presented to a user)”
 
@@ -66,13 +72,13 @@ In binary math we move from right to left, growing exponentially as we go. Each 
 
 (Reminder: Anything to the power of “0” = 1) 
 
-The following illustrates how you would calculate the value of the Byte 11111111. 
+The following illustrates how you would calculate the value of the Byte `11111111`. 
 
 Starting on the left our first 1 represents 20 or 1, the second 21 or 2, and so on until we reach our eighth 1 which equals 27 or 128. 
 
 To calculate the total value of this Byte, you add up all of the orange numbers.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_4.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_4.png?raw=true" /></a></p>
 
 <blockquote>Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?</blockquote>
 
@@ -82,7 +88,7 @@ Now let’s do some basic binary math. Consider the Byte `00010101`. How do we c
 
 In this case, the `0s = 0`. Remember, `0` = off. The 1s will have a value. So, to calculate the value of this Byte we carry down the value of each of the `1`s in the bitstring starting on the right and working to the left.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_5.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_5.png?raw=true" /></a></p>
 
 So, this Byte has the value of 16 + 4 + 1 or 21.
 
@@ -104,7 +110,7 @@ The diagram from the previous example is flipped on its side, so that the bits a
 
 From top to bottom each bit grows exponentially, as with our previous 8 bit example.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true" /></a></p>
 
 So, if we wanted to represent the time 9:10:25 AM, it would look like this (orange = on or 1, black = off or 0:
 
@@ -118,11 +124,11 @@ In the first seconds column the second bit is on representing 2.
 
 And, in the final column the first and third bits are on, representing 1 and 4 to total to 5.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true" /></a></p>
 
 Binary clocks typically represent Military or 24-hour time (for a chart see: http://militarytimechart.com/), so 9:10:25 PM would be represented as 21:10:25, like this:
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_8.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_8.png?raw=true" /></a></p>
 
 Check out http://binary.onlineclock.net/ to see a binary clock in action.
 
@@ -130,9 +136,9 @@ Check out http://binary.onlineclock.net/ to see a binary clock in action.
 
 <blockquote>Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.</blockquote>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_10.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_10.png?raw=true" /></a></p>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_11.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_11.png?raw=true" /></a></p>
 
 ## Representing Other Information in Binary
 
@@ -148,7 +154,7 @@ Take for example the number 61.
 
 To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true" /></a></p>
 
 1 + 4 + 8 + 16 + 32 = 61.
 
@@ -200,12 +206,12 @@ As with text encoding standards, there are many different color encoding schemas
 
 Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. 
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true" /></a></p>
 Image from http://i.imgur.com/UqHhN.png
 
 Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true" /></a></p>
 
 In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors. 
 
@@ -227,16 +233,16 @@ This particular encoding of colors across 3 Bytes is 24-bit color or 24-bit RGB 
 
 If you’ve played with the color sliders in Microsoft Office, then you’ve seen 24-bit color in action.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true" /></a></p>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true" /></a></p>
 
 In the left image above, all three colors (red green and blue) are set to their maximum value or
 255. As the color chart illustrates, white is created by blending all of the colors together. So to create white in 24-bit RGB color, all three Bytes are set to 1s: <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>. Remember from our addition exercises the total decimal value for the Byte <code>11111111</code> is 255.
 
 The color black is the absence of light, so the color black is represented as 0s. <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true" /></a></p>
 
 This means that the color red can be represented as: <code><font color="red">111111</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">255</font>, <font color="green">0</font>, <font color="blue">0</font></code>)
 
@@ -246,11 +252,11 @@ And, blue can be represented as: <code><font color="red">000000</font> <font col
 
 <blockquote>Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.</blockquote>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true" /></a></p>
 
 So, in a 24-bit color digital image, the color for each pixel would be encoded as three Bytes.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true" /></a></p>
 
 Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
 
@@ -296,7 +302,7 @@ First download the hello_world.txt file from the course website.
 
 This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true" /></a></p>
 
 If you open the file you should see the familiar phrase “Hello World!”
 
@@ -304,7 +310,7 @@ Now let’s look at the bits and Bytes that make up this file.
 
 Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open helloworld.txt from your computer.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true" /></a></p>
 
 The first set of numbers that you see on the left (`00000000`) is a reference to where you are in the file. 
 
@@ -336,11 +342,11 @@ An .rtf file is one saved in a Rich Text Format.
 
 Note that the text is the same as the previous file; however the .rtf specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true" /></a></p>
 
 You’ll notice that we have a few formatting options with Rich Text, such as font, style, size, and color. (If you are curious, you can review the RTF format specs at http://www.biblioscape.com/rtf15_spec.htm).
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true" /></a></p>
 
 Open helloworld.rtf in the text editor. 
 
@@ -354,13 +360,13 @@ The rest of the information is the formatting information for the .rtf file. Thi
 
 <blockquote>Q18: How large is this file in Bytes? How does this compare to the .txt file?</blockquote>
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true" /></a></p>
 
 Now let’s compare the .txt and .rtf files to a Word Document. 
 
 Download the helloworld.docx file from the course site. As with the other two examples, the text is the same.
 
-[IMAGE]
+<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true" /></a></p>
 
 Now open helloworld.docx in the hex editor.
 
