@@ -390,26 +390,45 @@ Unlike the .txt and .rtf files, the information is encoded in a way that cannot 
 
 All of the required questions are listed here for you to reference. Be sure to answer each question completely, including an explanation of how you arrived at your answer.
 
-- Q1: If 8 bits or 1 Byte can represent 256 patterns, what is the range of positive integers that can be represented in a single Byte? (e.g. 1-10)
-- Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?
-- Q3: Using the diagram above, what would a Byte representing the number 0 look like?
-- Q4: Using the same logic, calculate the value of the Byte `01101101`.
-- Q5: Now try working the other way. How would you represent the decimal number 40 in binary? (Hint: this doesn’t involve any advanced math, take a look at the orange numbers in the diagram above.)
-- Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in
+Q1: If 8 bits or 1 Byte can represent 256 patterns, what is the range of positive integers that can be represented in a single Byte? (e.g. 1-10)
+
+Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?
+
+Q3: Using the diagram above, what would a Byte representing the number 0 look like?
+
+Q4: Using the same logic, calculate the value of the Byte `01101101`.
+
+Q5: Now try working the other way. How would you represent the decimal number 40 in binary? (Hint: this doesn’t involve any advanced math, take a look at the orange numbers in the diagram above.)
+
+Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in
 this manner.
-- Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.
-- Q8: Notice that the phrase has a total of 10 letters and an exclamation point, but there are 12 Bytes in the bitstring above. Using the ASCII chart, explain why this is.
-- Q9: Given what you have just learned about ASCII encoding, is there a
+
+Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.
+
+Q8: Notice that the phrase has a total of 10 letters and an exclamation point, but there are 12 Bytes in the bitstring above. Using the ASCII chart, explain why this is.
+
+Q9: Given what you have just learned about ASCII encoding, is there a
 difference between the binary representations of “byte”, “Byte,” and “BYTE”?
-- Q10:  Look closely at the ASCII column of the ASCII chart. As a 1 Byte
+
+Q10:  Look closely at the ASCII column of the ASCII chart. As a 1 Byte
 encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).
-- Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
-- Q12: In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?
-- Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.
-- Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
-- Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?
-- Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.
-- Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?
-- Q18: How large is this file in Bytes? How does this compare to the .txt file?
-- Q19: What information about this file can you identify in the hex editor?
-- Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
+
+Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
+
+Q12: In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?
+
+Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.
+
+Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
+
+Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?
+
+Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.
+
+Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?
+
+Q18: How large is this file in Bytes? How does this compare to the .txt file?
+
+Q19: What information about this file can you identify in the hex editor?
+
+Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
