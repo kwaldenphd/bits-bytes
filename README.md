@@ -42,9 +42,9 @@ Megabyte MB = 1 million Bytes
 Gigabyte GB = 1 billion Bytes 
 Terabyte TB = 1 trillion Bytes
 
-One bit gives us two patterns: 1 and 0. 
+One bit gives us two patterns: `1 and 0`. 
 
-2 bits allow for four patterns: 00, 11, 01, 10. 
+2 bits allow for four patterns: `00, 11, 01, 10`. 
 
 Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
 
@@ -102,27 +102,17 @@ You can also add, subtract, divide, and multiply in binary, see http://academic.
 
 ## Reading a Binary Clock
 
-Now that you understand the basics of binary addition, you can read a binary clock. 
+Now that you understand the basics of binary addition, you can read a binary clock. A binary clock only requires a few bits to represent each of the numbers in a traditional HH:MM:SS representation of time.
 
-A binary clock only requires a few bits to represent each of the numbers in a traditional HH:MM:SS representation of time.
-
-The diagram from the previous example is flipped on its side, so that the bits are added from bottom to top rather than right to left. 
-
-From top to bottom each bit grows exponentially, as with our previous 8 bit example.
+The diagram from the previous example is flipped on its side, so that the bits are added from bottom to top rather than right to left. From top to bottom each bit grows exponentially, as with our previous 8 bit example.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true" /></a></p>
 
 So, if we wanted to represent the time 9:10:25 AM, it would look like this (orange = on or 1, black = off or 0:
 
-In the example above, the first digit of the hours has no bits “on” so the total is 0. 
+In the example above, the first digit of the hours has no bits “on” so the total is 0. In the second, the first and fourth are on representing 1 and 8, so we add these together to total 9. The one bit of the first minutes position is on for the 1 in our 10, the second is off for the 0 in the 10. 
 
-In the second, the first and fourth are on representing 1 and 8, so we add these together to total 9. 
-
-The one bit of the first minutes position is on for the 1 in our 10, the second is off for the 0 in the 10. 
-
-In the first seconds column the second bit is on representing 2. 
-
-And, in the final column the first and third bits are on, representing 1 and 4 to total to 5.
+In the first seconds column the second bit is on representing 2. And, in the final column the first and third bits are on, representing 1 and 4 to total to 5.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true" /></a></p>
 
@@ -142,25 +132,17 @@ Check out http://binary.onlineclock.net/ to see a binary clock in action.
 
 ## Representing Other Information in Binary
 
-Today, computers are much more than calculators. All of the information that you see on your computer screen is processed as binary code. 
+Today, computers are much more than calculators. All of the information that you see on your computer screen is processed as binary code. Remember, a single Byte can hold quite a bit of information, giving us 256 different opportunities to represent different pieces of information. 
 
-Remember, a single Byte can hold quite a bit of information, giving us 256 different opportunities to represent different pieces of information. 
+This means that we can take anything with less than 256 values and represent it in binary code. What about letters and numerals? Our alphabet A-Z and numbers 1-10 can be represented in one single Byte of information with lots of room to spare.
 
-This means that we can take anything with less than 256 values and represent it in binary code. What about letters and numerals? 
-
-Our alphabet A-Z and numbers 1-10 can be represented in one single Byte of information with lots of room to spare.
-
-Take for example the number 61.
-
-To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
+Take for example the number 61. To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true" /></a></p>
 
 1 + 4 + 8 + 16 + 32 = 61.
 
-But, what if we wanted to represent each of the individual characters 6 and 1 as numerals? 
-
-This is where character encoding schemas come into the picture. 
+But, what if we wanted to represent each of the individual characters 6 and 1 as numerals? This is where character encoding schemas come into the picture. 
 
 There are a number of different encoding schemas out there in the world, but we will use ASCII or the American Standard Code for Information Interchange as an example. See https://www.w3schools.com/charsets/ref_html_ascii.asp for more information on ASCII.
 
@@ -168,17 +150,15 @@ Take another look at the Decimal – Hexadecimal – Binary Conversion Table at 
 
 In the first example when we were calculating the decimal value of each of the Bytes, we used the decimal and binary columns. Now we’ll look at the ASCII and Binary columns.
 
-As the chart illustrates, each letter, number, or character has been assigned to a particular set of bits (0-32 are control characters, don’t worry about these). 
-
-Looking the ASCII column you can see that the numeral 6 has been assigned to `00110110` and the numeral 1 to `00110001`.
+As the chart illustrates, each letter, number, or character has been assigned to a particular set of bits (0-32 are control characters, don’t worry about these). Looking the ASCII column you can see that the numeral 6 has been assigned to `00110110` and the numeral 1 to `00110001`.
 
 Note that these correspond to the decimal numbers 54 and 49. In this case instead of representing numbers, these particular Bytes were assigned to represent particular characters on the keyboard. 
 
 So, while the decimal digit 61 can be represented in a single Byte `00111101`, the numeral 61 is represented in two ASCII Bytes `00110110 00110001`. 
 
-This is the set of Bytes that are returned to the computer when you type 6 and 1 in a word processing program.
- 
-Words become just strings of ASCII Bytes. The phrase “Hello World!” would appear in binary as:
+This is the set of Bytes that are returned to the computer when you type 6 and 1 in a word processing program. Words become just strings of ASCII Bytes. 
+
+The phrase “Hello World!” would appear in binary as:
 
 `01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001`
 
@@ -186,13 +166,9 @@ Words become just strings of ASCII Bytes. The phrase “Hello World!” would ap
 
 <blockquote>Q9: Given what you have just learned about ASCII encoding, is there a difference between the binary representations of “byte”, “Byte,” and “BYTE”?</blockquote>
 
-Before ASCII encoding was standardized in the early 1980s, different computers would use different standards for encoding text. 
+Before ASCII encoding was standardized in the early 1980s, different computers would use different standards for encoding text. Computers were programmed by punching the binary code into cardboard cards called Punched Cards. 
 
-Computers were programmed by punching the binary code into cardboard cards called Punched Cards. 
-
-Take a few minutes to explore the different standards and punch a virtual card with the Punch Card Emulator http://www.kloth.net/services/cardpunch.php. 
-
-You can learn more about Punched Cards at http://homepage.cs.uiowa.edu/~jones/cards/codes.html.
+Take a few minutes to explore the different standards and punch a virtual card with the Punch Card Emulator http://www.kloth.net/services/cardpunch.php. You can learn more about Punched Cards at http://homepage.cs.uiowa.edu/~jones/cards/codes.html.
 
 <blockquote>Q10: Look closely at the ASCII column of the ASCII chart. As a 1 Byte encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).</blockquote>
 
@@ -202,9 +178,7 @@ Again, all of the information that you encounter on your computer is processed a
 
 What about color? If we use a single Byte or 8-bits to represent color, we can represent a total of 256 different colors. However, we perceive a much wider range of colors, so to extend the palette we can represent colors using more bits. 
 
-As with text encoding standards, there are many different color encoding schemas.
-
-Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. 
+As with text encoding standards, there are many different color encoding schemas. Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. 
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true" /></a></p>
 Image from http://i.imgur.com/UqHhN.png
@@ -213,13 +187,9 @@ Mario is a great example. The original Nintendo used 8-bit color, but Super Nint
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true" /></a></p>
 
-In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors. 
+In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
 
-16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
-
-But, if you recall, the primary colors of light are red, green, and blue. 
-
-What if we decided to represent each of these primary colors in their own Byte of information?
+But, if you recall, the primary colors of light are red, green, and blue. What if we decided to represent each of these primary colors in their own Byte of information?
 
 <blockquote>Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?</blockquote>
 
@@ -227,11 +197,7 @@ Each Byte gives us 256 different patterns, so to calculate the total number of c
 
 <blockquote>Q12: In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?</blockquote>
 
-In our Mario examples, we looked at 8-bit and 16-bit color. 
-
-This particular encoding of colors across 3 Bytes is 24-bit color or 24-bit RGB for Red Green and Blue. 
-
-If you’ve played with the color sliders in Microsoft Office, then you’ve seen 24-bit color in action.
+In our Mario examples, we looked at 8-bit and 16-bit color. This particular encoding of colors across 3 Bytes is 24-bit color or 24-bit RGB for Red Green and Blue. If you’ve played with the color sliders in Microsoft Office, then you’ve seen 24-bit color in action.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true" /></a></p>
 
@@ -266,21 +232,11 @@ Don’t get caught in the details. The important take away here is that any piec
 
 If you take a look at the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) from earlier, you will note that there are a few columns that we didn’t talk about – Octal and Hex. 
 
-Petzold’s “Bytes and Hex” chapter explained the details of Hexidecimal encoding. 
+Petzold’s “Bytes and Hex” chapter explained the details of Hexidecimal encoding. What is important to understand here is that along with binary, there are other ways to represent numbers and string of Bytes or bitstreams.
 
-What is important to understand here is that along with binary, there are other ways to represent numbers and string of Bytes or bitstreams.
+If binary is base-2 and decimal is base-10, then octal is base-8 and hexadecimal or hex is base-16. What this means for us is that we can represent more bits with fewer symbols. Hexidecimal code is a way of representing 8-bit Bytes in just two symbols.
 
-If binary is base-2 and decimal is base-10, then octal is base-8 and hexadecimal or hex is base-16. 
-
-What this means for us is that we can represent more bits with fewer symbols. 
-
-Hexidecimal code is a way of representing 8-bit Bytes in just two symbols.
-
-Take for example, the character Z. Look at your chart. 
-
-In binary Z is represented as `01011010` (or the decimal digit 90). 
-
-In hex this string of bits can be represented simply as `5A`.
+Take for example, the character `Z`. Look at your chart. In binary `Z` is represented as `01011010` (or the decimal digit 90). In hex this string of bits can be represented simply as `5A`.
 
 <blockquote>Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.</blockquote>
 
@@ -298,7 +254,7 @@ We will see later when we work with HTML that this is exactly how you name the c
 
 Now that you are familiar with hex, we can experiment a bit with a hex editor. A hex editor is a program that allows for the direct manipulation of the binary data of a computer file.
 
-First download the hello_world.txt file from the course website. 
+First download the `hello_world.txt` file from the course website. 
 
 This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
 
@@ -308,7 +264,7 @@ If you open the file you should see the familiar phrase “Hello World!”
 
 Now let’s look at the bits and Bytes that make up this file. 
 
-Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open helloworld.txt from your computer.
+Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open `helloworld.txt` from your computer.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true" /></a></p>
 
@@ -326,9 +282,7 @@ Earlier we determined that “Hello World!” would look like this in binary:
 
 As the chart demonstrates, the hex code `48 65 6C 6C 6F 20 57 6F 72 6C 64 21` is equivalent to this binary representation. Hex, is simply a short-hand for binary code.
 
-With the hex editor, you can modify this file by modifying the hex. 
-
-Using the hex editor you are modifying the very bitstream (the binary representation of the file). 
+With the hex editor, you can modify this file by modifying the hex. Using the hex editor you are modifying the very bitstream (the binary representation of the file). 
 
 You can do this in two ways: 
 1- selecting the text in the text pane and typing as you would in any text editor
@@ -336,11 +290,9 @@ You can do this in two ways:
 
 <blockquote>Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.</blockquote>
 
-Now, download helloworld.rft from our course site. 
+Now, download `helloworld.rtf` from our course site. An `.rtf` file is one saved in a Rich Text Format. 
 
-An .rtf file is one saved in a Rich Text Format. 
-
-Note that the text is the same as the previous file; however the .rtf specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
+Note that the text is the same as the previous file; however the `.rtf` specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true" /></a></p>
 
@@ -348,13 +300,11 @@ You’ll notice that we have a few formatting options with Rich Text, such as fo
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true" /></a></p>
 
-Open helloworld.rtf in the text editor. 
+Open `helloworld.rtf` in the text editor. 
 
-Looking at the text pane, you can now see the binary code interpreted. 
+Looking at the text pane, you can now see the binary code interpreted. Our text that we see when we open the file in the text editor is at the very bottom of the file before the end `}`. 
 
-Our text that we see when we open the file in the text editor is at the very bottom of the file before the end }. 
-
-The rest of the information is the formatting information for the .rtf file. This is hidden from us when we open the file normally, but interpreted behind the scenes by the text editing program.
+The rest of the information is the formatting information for the `.rtf` file. This is hidden from us when we open the file normally, but interpreted behind the scenes by the text editing program.
 
 <blockquote>Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?</blockquote>
 
@@ -362,25 +312,19 @@ The rest of the information is the formatting information for the .rtf file. Thi
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true" /></a></p>
 
-Now let’s compare the .txt and .rtf files to a Word Document. 
+Now let’s compare the `.txt` and `.rtf` files to a Word Document. 
 
-Download the helloworld.docx file from the course site. As with the other two examples, the text is the same.
+Download the `helloworld.docx` file from the course site. As with the other two examples, the text is the same.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true" /></a></p>
 
-Now open helloworld.docx in the hex editor.
+Now open `helloworld.docx` in the hex editor.
 
-This file should look completely different. 
+This file should look completely different. In this case, we have a much larger file (almost twice the size) with more information encoded. The text pane on the right no longer makes sense because this information is encoded for the machine and not for us. 
 
-In this case, we have a much larger file (almost twice the size) with more information encoded. 
+`.rtf` files are a relatively simply file format and it just so happens that the information is encoded in a way that we can translate the information when it is decoded as text. This isn’t always true, as we can see with the Word document.
 
-The text pane on the right no longer makes sense because this information is encoded for the machine and not for us. 
-
-.rtf files are a relatively simply file format and it just so happens that the information is encoded in a way that we can translate the information when it is decoded as text. This isn’t always true, as we can see with the Word document.
-
-As with the .rtf what you see here is all of the information that the machine needs to render the file in the way that you see it when you open the file in Word. 
-
-Unlike the .txt and .rtf files, the information is encoded in a way that cannot be easily interpreted by us.
+As with the `.rtf` what you see here is all of the information that the machine needs to render the file in the way that you see it when you open the file in Word. Unlike the `.txt` and `.rtf` files, the information is encoded in a way that cannot be easily interpreted by us.
 
 <blockquote>Q19: What information about this file can you identify in the hex editor?</blockquote>
 
@@ -400,18 +344,15 @@ Q4: Using the same logic, calculate the value of the Byte `01101101`.
 
 Q5: Now try working the other way. How would you represent the decimal number 40 in binary? (Hint: this doesn’t involve any advanced math, take a look at the orange numbers in the diagram above.)
 
-Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in
-this manner.
+Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in this manner.
 
 Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.
 
 Q8: Notice that the phrase has a total of 10 letters and an exclamation point, but there are 12 Bytes in the bitstring above. Using the ASCII chart, explain why this is.
 
-Q9: Given what you have just learned about ASCII encoding, is there a
-difference between the binary representations of “byte”, “Byte,” and “BYTE”?
+Q9: Given what you have just learned about ASCII encoding, is there a difference between the binary representations of “byte”, “Byte,” and “BYTE”?
 
-Q10:  Look closely at the ASCII column of the ASCII chart. As a 1 Byte
-encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).
+Q10:  Look closely at the ASCII column of the ASCII chart. As a 1 Byte encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).
 
 Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
 
