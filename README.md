@@ -45,28 +45,25 @@ This lab will explore the relationship between the logical and conceptual object
 
 As you read in Petzold this week, bits are the smallest unit of storage in a binary system - that is, the smallest unit of information processed by a computer. Information is stored as 0 or 1. You are probably more familiar with the term Byte – a group of 8 bits.
 
-Kilobyte KB = 1,000 Bytes 
-Megabyte MB = 1 million Bytes 
-Gigabyte GB = 1 billion Bytes 
-Terabyte TB = 1 trillion Bytes
+- Kilobyte KB = 1,000 Bytes 
+- Megabyte MB = 1 million Bytes 
+- Gigabyte GB = 1 billion Bytes 
+- Terabyte TB = 1 trillion Bytes
 
-1. One bit gives us two patterns: `1 and 0`. 
+  a. One bit gives us two patterns: `1 and 0`. 
+  b. 2 bits allow for four patterns: `00, 11, 01, 10`. 
+  c. Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
+  d. So, 8 bits or 1 Byte provides a means for representing 256 different patterns, as illustrated in this chart:
 
-2. 2 bits allow for four patterns: `00, 11, 01, 10`. 
-
-3. Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
-
-4. So, 8 bits or 1 Byte provides a means for representing 256 different patterns, as illustrated in this chart:
-
-1 bit – 2 patterns (21)
-2 bits – 4 (22)
-3 bits – 8 (23)
-4 bits – 16 (24)
-5 bits – 32 (25)
-6 bits – 64 (26)
-7 bits – 128 (27)
-8 bits – 256 (28)
-n bits -  2n patterns
+- 1 bit – 2 patterns (21)
+- 2 bits – 4 (22)
+- 3 bits – 8 (23)
+- 4 bits – 16 (24)
+- 5 bits – 32 (25)
+- 6 bits – 64 (26)
+- 7 bits – 128 (27)
+- 8 bits – 256 (28)
+- n bits -  2n patterns
 
 ## Representing Numbers in Bytes
 
@@ -77,7 +74,8 @@ n bits -  2n patterns
 6. Following the logic from the chart in section 1, each bit represents 2<sup>n</sup> power. 
 
 7. In binary math we move from right to left, growing exponentially as we go. Each n grows by one representing the growth in the number of “bits” of information we can encode. 
-  * (Reminder: Anything to the power of “0” = 1) 
+
+<blockquote>**Reminder: Anything to the power of “0” = 1.</blockquote>
 
 8. The following illustrates how you would calculate the value of the Byte `11111111`. 
 
@@ -210,108 +208,109 @@ Image from http://i.imgur.com/UqHhN.png
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true" /></a></p>
 
-45. In the left image above, all three colors (red green and blue) are set to their maximum value or
-255. As the color chart illustrates, white is created by blending all of the colors together. So to create white in 24-bit RGB color, all three Bytes are set to 1s: <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>. Remember from our addition exercises the total decimal value for the Byte <code>11111111</code> is 255.
+45. In the left image above, all three colors (red green and blue) are set to their maximum value or 255. 
 
-46. The color black is the absence of light, so the color black is represented as 0s. <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>
+46. As the color chart illustrates, white is created by blending all of the colors together. So to create white in 24-bit RGB color, all three Bytes are set to 1s: <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>. Remember from our addition exercises the total decimal value for the Byte <code>11111111</code> is 255.
+
+47. The color black is the absence of light, so the color black is represented as 0s. <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true" /></a></p>
 
-47. This means that the color red can be represented as: <code><font color="red">111111</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">255</font>, <font color="green">0</font>, <font color="blue">0</font></code>)
+48. This means that the color red can be represented as: <code><font color="red">111111</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">255</font>, <font color="green">0</font>, <font color="blue">0</font></code>)
 
-48. Green can be represented as: <code><font color="red">000000</font> <font color="green">111111</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">255</font>, <font color="blue">0</font></code>)
+49. Green can be represented as: <code><font color="red">000000</font> <font color="green">111111</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">255</font>, <font color="blue">0</font></code>)
 
-49. And, blue can be represented as: <code><font color="red">000000</font> <font color="green">000000</font> <font color="blue">111111</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">0</font>, <font color="blue">255</font></code>)
+50. And, blue can be represented as: <code><font color="red">000000</font> <font color="green">000000</font> <font color="blue">111111</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">0</font>, <font color="blue">255</font></code>)
 
 <blockquote>Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.</blockquote>
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true" /></a></p>
 
-50. So, in a 24-bit color digital image, the color for each pixel would be encoded as three Bytes.
+51. So, in a 24-bit color digital image, the color for each pixel would be encoded as three Bytes.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true" /></a></p>
 
-51. Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
+52. Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
 
-52. Don’t get caught in the details. The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. You will never have to work with the machine at this level. We’ll talk more about programming next week. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
+53. Don’t get caught in the details. The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. You will never have to work with the machine at this level. We’ll talk more about programming next week. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
 
 # Hex and Bitstreams
 
-53. If you take a look at the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) from earlier, you will note that there are a few columns that we didn’t talk about – Octal and Hex. 
+54. If you take a look at the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) from earlier, you will note that there are a few columns that we didn’t talk about – Octal and Hex. 
 
-54. Petzold’s “Bytes and Hex” chapter explained the details of Hexidecimal encoding. What is important to understand here is that along with binary, there are other ways to represent numbers and string of Bytes or bitstreams.
+55. Petzold’s “Bytes and Hex” chapter explained the details of Hexidecimal encoding. What is important to understand here is that along with binary, there are other ways to represent numbers and string of Bytes or bitstreams.
 
-55. If binary is base-2 and decimal is base-10, then octal is base-8 and hexadecimal or hex is base-16. What this means for us is that we can represent more bits with fewer symbols. Hexidecimal code is a way of representing 8-bit Bytes in just two symbols.
+56. If binary is base-2 and decimal is base-10, then octal is base-8 and hexadecimal or hex is base-16. What this means for us is that we can represent more bits with fewer symbols. Hexidecimal code is a way of representing 8-bit Bytes in just two symbols.
 
-56. Take for example, the character `Z`. Look at your chart. In binary `Z` is represented as `01011010` (or the decimal digit 90). In hex this string of bits can be represented simply as `5A`.
+57. Take for example, the character `Z`. Look at your chart. In binary `Z` is represented as `01011010` (or the decimal digit 90). In hex this string of bits can be represented simply as `5A`.
 
 <blockquote>Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.</blockquote>
 
-57. Our 24-bit color palette gives us another example. 
+58. Our 24-bit color palette gives us another example. 
 
-58. Open the RGB Color Codes Chart (http://www.rapidtables.com/web/color/RGB_Color.htm) and select the color white. 
+59. Open the RGB Color Codes Chart (http://www.rapidtables.com/web/color/RGB_Color.htm) and select the color white. 
 
-59. Below the R, G, and B, you should see another code preceded by a # symbol. This is the hex code for the color. 
+60. Below the R, G, and B, you should see another code preceded by a # symbol. This is the hex code for the color. 
 
-60. We can represent the color with the bits <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>, or we can use the corresponding decimal digits <code><font color="red">255</font> <font color="green">255</font> <font color="blue">255</font></code>, or we can use the hex value <code><font color="red">FF</font> <font color="green">FF</font><font color="blue">FF</font></code>. 
+61. We can represent the color with the bits <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>, or we can use the corresponding decimal digits <code><font color="red">255</font> <font color="green">255</font> <font color="blue">255</font></code>, or we can use the hex value <code><font color="red">FF</font><font color="green">FF</font><font color="blue">FF</font></code>. 
 
-61. We will see later when we work with HTML that this is exactly how you name the color value that you would like to use in your formatting (see https://www.w3schools.com/colors/colors_picker.asp).
+62. We will see later when we work with HTML that this is exactly how you name the color value that you would like to use in your formatting (see https://www.w3schools.com/colors/colors_picker.asp).
 
 ## Manipulating Bitstreams with a Hex Editor
 
-62. Now that you are familiar with hex, we can experiment a bit with a hex editor. A hex editor is a program that allows for the direct manipulation of the binary data of a computer file.
+63. Now that you are familiar with hex, we can experiment a bit with a hex editor. A hex editor is a program that allows for the direct manipulation of the binary data of a computer file.
 
-63. First download the `hello_world.txt` file from the course website. 
+64. First download the `hello_world.txt` file from the course website. 
 
-64. This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
+65. This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true" /></a></p>
 
-65. If you open the file you should see the familiar phrase “Hello World!”
+66. If you open the file you should see the familiar phrase “Hello World!”
 
-66. Now let’s look at the bits and Bytes that make up this file. 
+67. Now let’s look at the bits and Bytes that make up this file. 
 
-67. Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open `helloworld.txt` from your computer.
+68. Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open `helloworld.txt` from your computer.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true" /></a></p>
 
-68. The first set of numbers that you see on the left (`00000000`) is a reference to where you are in the file. 
+69. The first set of numbers that you see on the left (`00000000`) is a reference to where you are in the file. 
 
-69. This not a particularly large file, so we only have one line to reference. In the middle of the screen we see each Byte represented in hex. And, on the right we see the interpreted text encoded according to UTF-8. Note that the “.” represents a space.
+70. This not a particularly large file, so we only have one line to reference. In the middle of the screen we see each Byte represented in hex. And, on the right we see the interpreted text encoded according to UTF-8. Note that the “.” represents a space.
 
 <blockquote>Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?</blockquote>
 
-70. UTF-8 is very similar to ASCII, so you can use the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) to confirm that the hex corresponds to the encoded letter.
+71. UTF-8 is very similar to ASCII, so you can use the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) to confirm that the hex corresponds to the encoded letter.
 
-71. Earlier we determined that “Hello World!” would look like this in binary:
+72. Earlier we determined that “Hello World!” would look like this in binary:
 
 `01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001`
 
-72. As the chart demonstrates, the hex code `48 65 6C 6C 6F 20 57 6F 72 6C 64 21` is equivalent to this binary representation. Hex, is simply a short-hand for binary code.
+73. As the chart demonstrates, the hex code `48 65 6C 6C 6F 20 57 6F 72 6C 64 21` is equivalent to this binary representation. Hex, is simply a short-hand for binary code.
 
-73. With the hex editor, you can modify this file by modifying the hex. Using the hex editor you are modifying the very bitstream (the binary representation of the file). 
+74. With the hex editor, you can modify this file by modifying the hex. Using the hex editor you are modifying the very bitstream (the binary representation of the file). 
 
-74. You can do this in two ways: 
+75. You can do this in two ways: 
   a. selecting the text in the text pane and typing as you would in any text editor
   b. using the Conversion Chart to write the hex in the hex panel
 
 <blockquote>Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.</blockquote>
 
-75. Now, download `helloworld.rtf` from our course site. An `.rtf` file is one saved in a Rich Text Format. 
+76. Now, download `helloworld.rtf` from our course site. An `.rtf` file is one saved in a Rich Text Format. 
 
-76. Note that the text is the same as the previous file; however the `.rtf` specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
+77. Note that the text is the same as the previous file; however the `.rtf` specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true" /></a></p>
 
-77. You’ll notice that we have a few formatting options with Rich Text, such as font, style, size, and color. (If you are curious, you can review the RTF format specs at http://www.biblioscape.com/rtf15_spec.htm).
+78. You’ll notice that we have a few formatting options with Rich Text, such as font, style, size, and color. (If you are curious, you can review the RTF format specs at http://www.biblioscape.com/rtf15_spec.htm).
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true" /></a></p>
 
-78. Open `helloworld.rtf` in the text editor. 
+79. Open `helloworld.rtf` in the text editor. 
 
-79. Looking at the text pane, you can now see the binary code interpreted. Our text that we see when we open the file in the text editor is at the very bottom of the file before the end `}`. 
+80. Looking at the text pane, you can now see the binary code interpreted. Our text that we see when we open the file in the text editor is at the very bottom of the file before the end `}`. 
 
-80. The rest of the information is the formatting information for the `.rtf` file. This is hidden from us when we open the file normally, but interpreted behind the scenes by the text editing program.
+81. The rest of the information is the formatting information for the `.rtf` file. This is hidden from us when we open the file normally, but interpreted behind the scenes by the text editing program.
 
 <blockquote>Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?</blockquote>
 
@@ -319,19 +318,19 @@ Image from http://i.imgur.com/UqHhN.png
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true" /></a></p>
 
-81. Now let’s compare the `.txt` and `.rtf` files to a Word Document. 
+82. Now let’s compare the `.txt` and `.rtf` files to a Word Document. 
 
-82. Download the `helloworld.docx` file from the course site. As with the other two examples, the text is the same.
+83. Download the `helloworld.docx` file from the course site. As with the other two examples, the text is the same.
 
 <p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true" /></a></p>
 
-83. Now open `helloworld.docx` in the hex editor.
+84. Now open `helloworld.docx` in the hex editor.
 
-84. This file should look completely different. In this case, we have a much larger file (almost twice the size) with more information encoded. The text pane on the right no longer makes sense because this information is encoded for the machine and not for us. 
+85. This file should look completely different. In this case, we have a much larger file (almost twice the size) with more information encoded. The text pane on the right no longer makes sense because this information is encoded for the machine and not for us. 
 
-85. `.rtf` files are a relatively simply file format and it just so happens that the information is encoded in a way that we can translate the information when it is decoded as text. This isn’t always true, as we can see with the Word document.
+86. `.rtf` files are a relatively simply file format and it just so happens that the information is encoded in a way that we can translate the information when it is decoded as text. This isn’t always true, as we can see with the Word document.
 
-86. As with the `.rtf` what you see here is all of the information that the machine needs to render the file in the way that you see it when you open the file in Word. Unlike the `.txt` and `.rtf` files, the information is encoded in a way that cannot be easily interpreted by us.
+87. As with the `.rtf` what you see here is all of the information that the machine needs to render the file in the way that you see it when you open the file in Word. Unlike the `.txt` and `.rtf` files, the information is encoded in a way that cannot be easily interpreted by us.
 
 <blockquote>Q19: What information about this file can you identify in the hex editor?</blockquote>
 
