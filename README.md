@@ -49,11 +49,10 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 - Megabyte MB = 1 million Bytes 
 - Gigabyte GB = 1 billion Bytes 
 - Terabyte TB = 1 trillion Bytes
-
-  a. One bit gives us two patterns: `1 and 0`. 
-  b. 2 bits allow for four patterns: `00, 11, 01, 10`. 
-  c. Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
-  d. So, 8 bits or 1 Byte provides a means for representing 256 different patterns, as illustrated in this chart:
+  * One bit gives us two patterns: `1 and 0`. 
+  * 2 bits allow for four patterns: `00, 11, 01, 10`.
+  * Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
+  * So, 8 bits or 1 Byte provides a means for representing 256 different patterns, as illustrated in this chart:
 
 - 1 bit – 2 patterns (21)
 - 2 bits – 4 (22)
