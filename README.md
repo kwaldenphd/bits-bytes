@@ -102,7 +102,7 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 14. You can check your answers with the Decimal – Hexadecimal – Binary Conversion Table at https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf. For now, look at the Decimal column for your number and the Binary column for the correct binary representation.
 
-15. You can also add, subtract, divide, and multiply in binary, see http://academic.evergreen.edu/projects/biophysics/technotes/misc/bin_math.htm
+15. You can also add, subtract, divide, and multiply in binary, see https://web.archive.org/web/20170427003527/http://academic.evergreen.edu/projects/biophysics/technotes/misc/bin_math.htm.
 
 ## Reading a Binary Clock
 
