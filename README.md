@@ -8,6 +8,8 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 In this lab, we are going to explore how information is represented in binary code. Binary code is the machine code or machine language. These are the 1’s and 0’s that represent the bits and Bytes that make up computer programs or the data processed by the computer. Everything that you see on your computer screen can be reduced to binary code, although most users of computers have few reasons to interact with the computer at this level. This will be one of the rare times when you will manipulate binary data, but this project provides an opportunity to further explore the relationship between what you seen on the screen and what is going on inside the machine.
 
+[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
+
 ## Lab Objectives
 
 By the end of this lab you will be able to:
@@ -336,6 +338,8 @@ Image from http://i.imgur.com/UqHhN.png
 <blockquote>Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.</blockquote>
 
 # Lab Questions
+
+[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
 
 All of the required questions are listed here for you to reference. Be sure to answer each question completely, including an explanation of how you arrived at your answer.
 
