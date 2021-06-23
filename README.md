@@ -295,7 +295,7 @@ Image from http://i.imgur.com/UqHhN.png
   a. selecting the text in the text pane and typing as you would in any text editor
   b. using the Conversion Chart to write the hex in the hex panel
 
-<blockquote>Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.</blockquote>
+<blockquote>Q16: Using the hex editor, modify either the hexadecimal values or the character values. If modifying the hexadecimal values, note how the characters change. If modifying the characters, note how the hexadecimal values change. Describe and explain this process in your notebook.</blockquote>
 
 76. Now, download `helloworld.rtf` from our course site. An `.rtf` file is one saved in a Rich Text Format. 
 
@@ -373,7 +373,7 @@ Q14: Take a moment to explain the difference between the decimal digit, the hex 
 
 Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?
 
-Q16: Using the hex editor, modify the file, export it to your computer, and open it in a text editor to see the changes that you just made to the file. Explain your process in your notebook.
+Q16: Using the hex editor, modify either the hexadecimal values or the character values. If modifying the hexadecimal values, note how the characters change. If modifying the characters, note how the hexadecimal values change. Describe and explain this process in your notebook.
 
 Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?
 
