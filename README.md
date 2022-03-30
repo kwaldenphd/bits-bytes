@@ -27,15 +27,15 @@ This lab is based on the "Project 1: Binary, Bits, and Basics" project materials
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_1.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_1.jpg?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_1.jpg?raw=true"></p>
 
 "As physical objects, consisting of ‘inscriptions’ (usually binary states of ‘on-ness’ or ‘off-ness’) on carrier media such as computer disks or tapes. (Despite the impression of that they exist in ‘cyberspace’, even online resources must exist on physical carriers somewhere)”
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_2.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_2.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.jpg?raw=true"></p>
 
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_3.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_3.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_3.png?raw=true"></p>
 
 "As conceptual objects that have meaning to humans, unlike the logical or physical objects that encode them at any particular time. (This is recognisable as the performance presented to a user)”
 
@@ -84,7 +84,7 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 10. To calculate the total value of this Byte, you add up all of the orange numbers.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_4.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_4.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_4.png?raw=true"></p>
 
 <blockquote>Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?</blockquote>
 
@@ -94,7 +94,7 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 12. In this case, the `0s = 0`. Remember, `0` = off. The 1s will have a value. So, to calculate the value of this Byte we carry down the value of each of the `1`s in the bitstring starting on the right and working to the left.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_5.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_5.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_5.png?raw=true"></p>
 
 13. So, this Byte has the value of 16 + 4 + 1 or 21.
 
@@ -112,7 +112,7 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 17. The diagram from the previous example is flipped on its side, so that the bits are added from bottom to top rather than right to left. From top to bottom each bit grows exponentially, as with our previous 8 bit example.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_6.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_6.png?raw=true"></p>
 
 18. So, if we wanted to represent the time 9:10:25 AM, it would look like this (orange = on or 1, black = off or 0:
 
@@ -120,11 +120,11 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 20. In the first seconds column the second bit is on representing 2. And, in the final column the first and third bits are on, representing 1 and 4 to total to 5.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_7.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_7.png?raw=true"></p>
 
 21. Binary clocks typically represent Military or 24-hour time (for a chart see: http://militarytimechart.com/), so 9:10:25 PM would be represented as 21:10:25, like this:
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_8.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_8.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_8.png?raw=true"></p>
 
 22. Check out http://binary.onlineclock.net/ to see a binary clock in action.
 
@@ -132,9 +132,9 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 <blockquote>Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.</blockquote>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_10.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_10.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_10.png?raw=true"></p>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_11.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_11.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_11.png?raw=true"></p>
 
 ## Representing Other Information in Binary
 
@@ -144,7 +144,8 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 25. Take for example the number 61. To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_12.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_12.png?raw=true"></p>
+
 
 <blockquote>1 + 4 + 8 + 16 + 32 = 61</blockquote>
 
@@ -186,12 +187,14 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 39. As with text encoding standards, there are many different color encoding schemas. Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. 
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_13.png?raw=true" /></a></p>
-Image from http://i.imgur.com/UqHhN.png
+<fig>
+ <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_13.png?raw=true"></p>
+ <p align="center"><figcaption>Image from http://i.imgur.com/UqHhN.png</figcaption></p>
+ </fig>
 
 40. Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_14.jpg?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_14.jpg?raw=true"></p>
 
 41. In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
 
@@ -205,9 +208,9 @@ Image from http://i.imgur.com/UqHhN.png
 
 44. In our Mario examples, we looked at 8-bit and 16-bit color. This particular encoding of colors across 3 Bytes is 24-bit color or 24-bit RGB for Red Green and Blue. If you’ve played with the color sliders in Microsoft Office, then you’ve seen 24-bit color in action.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_15.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true"></p>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_16.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_16.png?raw=true"></p>
 
 45. In the left image above, all three colors (red green and blue) are set to their maximum value or 255. 
 
@@ -215,7 +218,7 @@ Image from http://i.imgur.com/UqHhN.png
 
 47. The color black is the absence of light, so the color black is represented as 0s. <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_17.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true"></p>
 
 48. This means that the color red can be represented as: <code><font color="red">111111</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">255</font>, <font color="green">0</font>, <font color="blue">0</font></code>)
 
@@ -225,11 +228,11 @@ Image from http://i.imgur.com/UqHhN.png
 
 <blockquote>Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.</blockquote>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_18.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_18.png?raw=true"></p>
 
 51. So, in a 24-bit color digital image, the color for each pixel would be encoded as three Bytes.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_19.jpg?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_19.jpg?raw=true"></p>
 
 52. Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
 
@@ -265,7 +268,7 @@ Image from http://i.imgur.com/UqHhN.png
 
 65. This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_20.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_20.png?raw=true"></p>
 
 66. If you open the file you should see the familiar phrase “Hello World!”
 
@@ -273,7 +276,7 @@ Image from http://i.imgur.com/UqHhN.png
 
 68. Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open `helloworld.txt` from your computer.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_21.jpg?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_21.jpg?raw=true"></p>
 
 69. The first set of numbers that you see on the left (`00000000`) is a reference to where you are in the file. 
 
@@ -301,11 +304,11 @@ Image from http://i.imgur.com/UqHhN.png
 
 77. Note that the text is the same as the previous file; however the `.rtf` specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_22.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_22.png?raw=true"></p>
 
 78. You’ll notice that we have a few formatting options with Rich Text, such as font, style, size, and color. (If you are curious, you can review the RTF format specs at http://www.biblioscape.com/rtf15_spec.htm).
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_23.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_23.png?raw=true"></p>
 
 79. Open `helloworld.rtf` in the text editor. 
 
@@ -317,13 +320,13 @@ Image from http://i.imgur.com/UqHhN.png
 
 <blockquote>Q18: How large is this file in Bytes? How does this compare to the .txt file?</blockquote>
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_24.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_24.png?raw=true"></p>
 
 82. Now let’s compare the `.txt` and `.rtf` files to a Word Document. 
 
 83. Download the `helloworld.docx` file from the course site. As with the other two examples, the text is the same.
 
-<p align="center"><a href="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/bits-bytes/blob/master/images/Image_25.png?raw=true" /></a></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_25.png?raw=true"></p>
 
 84. Now open `helloworld.docx` in the hex editor.
 
