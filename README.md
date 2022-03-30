@@ -19,14 +19,14 @@ By the end of this lab you will be able to:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c49fc924-268d-4f3b-a0cc-ade900293029">Lab overview</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7aa5dfc9-5411-473f-a61b-ad380157d09d">Lab overview</a></td>
   </tr>
   </table>
   
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=134db1ac-7685-4fce-b121-adea01531389">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4299d96e-dbd7-4f12-b6ec-ae5101727eb0">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
@@ -62,14 +62,14 @@ Example:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c49fc924-268d-4f3b-a0cc-ade900293029">Lab overview</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7aa5dfc9-5411-473f-a61b-ad380157d09d">Lab overview</a></td>
   </tr>
   </table>
   
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=134db1ac-7685-4fce-b121-adea01531389">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4299d96e-dbd7-4f12-b6ec-ae5101727eb0">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
@@ -96,6 +96,13 @@ Librarians, archivists, and information professionals who work in digital preser
 This lab will explore the relationship between the logical and conceptual object – the bits and bytes that the computer translates into the representations of information on the screen that we can understand.
 
 # Bits
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5ba05165-ec5a-45f6-b0a8-ad38014ded42">Binary Number Systems</a></td>
+  </tr>
+  </table>
 
 ## What is a bit?
 
@@ -192,6 +199,13 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 ## Representing Other Information in Binary
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=60fc70ac-c9e6-4689-99df-ad8201623840">Encoding Schema</a></td>
+  </tr>
+  </table>
+
 23. Today, computers are much more than calculators. All of the information that you see on your computer screen is processed as binary code. Remember, a single Byte can hold quite a bit of information, giving us 256 different opportunities to represent different pieces of information. 
 
 24. This means that we can take anything with less than 256 values and represent it in binary code. What about letters and numerals? Our alphabet A-Z and numbers 1-10 can be represented in one single Byte of information with lots of room to spare.
@@ -199,7 +213,6 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 25. Take for example the number 61. To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
 
 <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_12.png?raw=true"></p>
-
 
 <blockquote>1 + 4 + 8 + 16 + 32 = 61</blockquote>
 
