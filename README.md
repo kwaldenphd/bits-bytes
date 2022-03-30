@@ -5,12 +5,9 @@ This tutorial was written by [Lindsay K. Mattock](http://lindsaymattock.net) and
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
+## Lab Overview and Goals
 
 In this lab, we are going to explore how information is represented in binary code. Binary code is the machine code or machine language. These are the 1’s and 0’s that represent the bits and Bytes that make up computer programs or the data processed by the computer. Everything that you see on your computer screen can be reduced to binary code, although most users of computers have few reasons to interact with the computer at this level. This will be one of the rare times when you will manipulate binary data, but this project provides an opportunity to further explore the relationship between what you seen on the screen and what is going on inside the machine.
-
-[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
-
-## Lab Objectives
 
 By the end of this lab you will be able to:
 -	Calculate the value of Bytes using binary addition
@@ -19,11 +16,68 @@ By the end of this lab you will be able to:
 -	Use a hex editor to manipulate binary code
 -	Define the relationship between the logical, physical, and conceptual facets of a digital object
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c49fc924-268d-4f3b-a0cc-ade900293029">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=134db1ac-7685-4fce-b121-adea01531389">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
 ## Acknowledgements
 
 This lab is based on the "Project 1: Binary, Bits, and Basics" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
-## Overview of Key Concepts
+# Table of Contents
+
+- [Lecture and Live Coding](#lecture-and-live-coding)
+- [Lab Notebook Template](#lab-notebook-template)
+- [Overview of Key Concepts](#overview-of-key-concepts)
+- [Bits](#bits)
+  * [What is a bit?](#what-is-a-bit)
+  * [Representing Numbers in Bytes](#representing-numbers-in-bytes)
+  * [Reading a Binary Clock](#reading-a-binary-clock)
+  * [Representing Other Information in Binary](#representing-other-information-in-binary)
+- [Representing Other Information](#representing-other-information)
+- [Hex and Bitstreams](#hex-and-bitstreams)
+  * [Manipulating Bitstreams with a Hex Editor](#manipulating-bitstreams-with-a-hex-editor)
+- [Lab Notebook Questions](#lab-notebook-questions)
+
+# Lecture and Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of select sections.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c49fc924-268d-4f3b-a0cc-ade900293029">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=134db1ac-7685-4fce-b121-adea01531389">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
+# Lab Notebook Template
+
+[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
+
+# Overview of Key Concepts
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
