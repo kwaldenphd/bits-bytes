@@ -89,7 +89,7 @@ Librarians, archivists, and information professionals who work in digital preser
 
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_3.png?raw=true"></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Main_Building_at_the_University_of_Notre_Dame.jpg"></p>
 
 "As conceptual objects that have meaning to humans, unlike the logical or physical objects that encode them at any particular time. (This is recognisable as the performance presented to a user)”
 
