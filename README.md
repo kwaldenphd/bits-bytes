@@ -85,7 +85,7 @@ Librarians, archivists, and information professionals who work in digital preser
 
 "As physical objects, consisting of ‘inscriptions’ (usually binary states of ‘on-ness’ or ‘off-ness’) on carrier media such as computer disks or tapes. (Despite the impression of that they exist in ‘cyberspace’, even online resources must exist on physical carriers somewhere)”
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.png?raw=true"></p>
 
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
 
@@ -166,6 +166,13 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 14. You can check your answers with the Decimal – Hexadecimal – Binary Conversion Table at https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf. For now, look at the Decimal column for your number and the Binary column for the correct binary representation.
 
 15. You can also add, subtract, divide, and multiply in binary, see https://web.archive.org/web/20170427003527/http://academic.evergreen.edu/projects/biophysics/technotes/misc/bin_math.htm.
+
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfa1NmlA5FGw4wHylcYQSbs8AdKopbn0pvIZSgcZM1ZgiBQCw/viewform?usp=sf_link">Binary Math Lecture Check-In</a></td>
+  </tr>
+  </table>
 
 ## Reading a Binary Clock
 
@@ -304,6 +311,13 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 52. Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
 
 53. Don’t get caught in the details. The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. You will never have to work with the machine at this level. We’ll talk more about programming next week. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
+
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSewas66ZOn2vZBeaJsfVA0-3u6DfBFRry0nK2cj1CMx8R_eyA/viewform?usp=sf_link">Encoding Schema Lecture Check-In</a></td>
+  </tr>
+  </table>
 
 # Hex and Bitstreams
 
