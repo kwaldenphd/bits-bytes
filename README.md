@@ -421,7 +421,7 @@ As you read in Petzold this week, bits are the smallest unit of storage in a bin
 
 <blockquote>Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.</blockquote>
 
-# Lab Questions
+# Lab Notebook Questions
 
 [Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
 
