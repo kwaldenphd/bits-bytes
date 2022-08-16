@@ -125,13 +125,25 @@ WIKI SCREENSHOT
 - "Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. The standard is maintained by the Unicode Consortium, and as of May 2019 the most recent version, Unicode 12.1, contains a repertoire of 137,994 characters (consisting of 137,766 graphic characters, 163 format characters and 65 control characters) covering 150 modern and historic scripts, as well as multiple symbol sets and emoji" ([Wikipedia](https://en.wikipedia.org/wiki/Unicode))
 - [Click here](https://home.unicode.org/basic-info/overview) to learn more about the Unicode consortium
 
-COMPREHENSION CHECK
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScOk5_z6dRF8WvPUezpyU78sI2bvVrdnySVmNfH9IUGnXYh0w/viewform?usp=sf_link">Encoding Schema Comprehension Check</a></td>
+  </tr>
+  </table>
+
+## File Formats
+
+Compare txt, rtf, word, and pdf.
+
+Open in processing programs vs plain-text systems.
+
+BRING IN EXCEL/CSV HERE TOO
+
+### Key Terms
 
 ### Application
 
-
-
-## File Formats
 
 
 
