@@ -14,15 +14,15 @@
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_1.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_1.jpg?raw=true" width="500"></p>
 
 "As physical objects, consisting of ‘inscriptions’ (usually binary states of ‘on-ness’ or ‘off-ness’) on carrier media such as computer disks or tapes. (Despite the impression of that they exist in ‘cyberspace’, even online resources must exist on physical carriers somewhere)”
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.png?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.png?raw=true" width="500"></p>
 
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Main_Building_at_the_University_of_Notre_Dame.jpg"></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Main_Building_at_the_University_of_Notre_Dame.jpg" width="500"></p>
 
 "As conceptual objects that have meaning to humans, unlike the logical or physical objects that encode them at any particular time. (This is recognisable as the performance presented to a user)”
 
@@ -39,7 +39,7 @@ This lab will explore the relationship between the logical and conceptual object
   
 ### Key Terms
 
-BITS BYTES IMAGE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bits_Bytes_Image.png?raw=true" width="500"></p>
 
 **Bits**
 - "The bit is a basic unit of information in information theory, computing, including digital communications. As a binary digit, the bit represents a logical state, having only one of two values. It may be physically implemented with a two-state device. These values are most commonly represented as either 0 or 1" ([Wikipedia](https://en.wikipedia.org/wiki/Bit))
@@ -60,7 +60,7 @@ BITS BYTES IMAGE
 - One bit gives us two patterns: `1 and 0`. Two bits allow for four patterns: `00, 11, 01, 10`.
 - Every time we add one bit to the length of our bitstring, we double the number of available patterns. So, 8 bits or 1 byte provides a means for representing 256 different patterns, as illustrated below:
 
-PATTERN RANGE IMAGE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Pattern_Ranges.png?raw=true" width="500"></p>
 
   * 1 bit – 2 patterns (21)
   * 2 bits – 4 (22)
@@ -81,7 +81,9 @@ PATTERN RANGE IMAGE
 
 ### Application
 
-COVNERSION DIAGRAM
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Decimal_Number_Systems.gif?raw=true" width="500"></p>
+
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p>
 
 Resources:
 - [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
@@ -99,11 +101,14 @@ LIVE LECTURE LINK
 
 ### Key Terms
 
-ACM IMAGES
+<table border="0"><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_1.png?raw=true" width="500"></p></td>
+<td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_2.png?raw=true" width="500"></p></td></tr>
+<tr><td>Table 1a. R.W. Bemer, "<a href="https://web.archive.org/web/20131017062654/http://www.trailing-edge.com/~bobbemer/SURVEY.HTM">Survey of coded character representation</a>", Commun. ACM 3, No. 12, 639-641, 1960 Dec</td><td>Table 2. H.J. Smith, Jr., F.A. Williams, "<a href="https://web.archive.org/web/20131017062654/http://www.trailing-edge.com/~bobbemer/SURVEY.HTM">Survey of punched card codes</a>", Commun. ACM 3, 639 & 642, 1960 Dec</td></tr></table>
+
 **Character encoding**
 - "Character encoding is used to represent a repertoire of characters by some kind of encoding system. Depending on the abstraction level and context, corresponding code points and the resulting code space may be regarded as bit patterns, octets, natural numbers, electrical pulses, etc. A character encoding is used in computation, data storage, and transmission of textual data" ([Wikipedia](https://en.wikipedia.org/wiki/Character_encoding))
 
-ASCII IMAGE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ASCII.png?raw=true" width="500"></p>
 
 **American Standard Code for Information Interchange (ASCII)**
 - "A character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, and other devices. Most modern character-encoding schemes are based on ASCII, although they support many additional characters" ([Wikipedia](https://en.wikipedia.org/wiki/ASCII))
@@ -120,7 +125,8 @@ Sample conversion table:
 
 [Click here](https://www.asciitable.xyz/) for a full ASCII conversion table.
 
-WIKI SCREENSHOT
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Wiki_Encoding.png?raw=true" width="500"></p>
+
 **Unicode**
 - "Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. The standard is maintained by the Unicode Consortium, and as of May 2019 the most recent version, Unicode 12.1, contains a repertoire of 137,994 characters (consisting of 137,766 graphic characters, 163 format characters and 65 control characters) covering 150 modern and historic scripts, as well as multiple symbol sets and emoji" ([Wikipedia](https://en.wikipedia.org/wiki/Unicode))
 - [Click here](https://home.unicode.org/basic-info/overview) to learn more about the Unicode consortium
@@ -134,7 +140,7 @@ WIKI SCREENSHOT
 
 ## File Formats
 
-FILE FORMATS IMAGE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/file_formats.jpg?raw=true" width="500"></p>
 
 Hello world file in four formats:
 - txt
@@ -208,7 +214,7 @@ QX: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this c
 
 The end of the "Binary Number Systems" lecture mentioned how binary numbers are also used to represent things other than numbers, text, or characters.
 
-BIT COMPARISON IMAGE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bit_Comparison.png?raw=true" width="500"></p>
 
 What about color? If we use a single byte or 8-bits to represent color, we can represent a total of 256 different colors. However, we perceive a much wider range of colors, so to extend the palette we can represent colors using more bits. 
 
@@ -219,19 +225,21 @@ What about color? If we use a single byte or 8-bits to represent color, we can r
 
 Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
 
-HOT AIR BALLOONS DIAGRAM
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Hot_Air_Balloons.png?raw=true" width="500"></p>
 
 In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
 
-PRIMARY COLOR VENN DIAGRAM
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true" width="500"></p>
+
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_18.png?raw=true" width="500"></p>
 
 As with text encoding standards, there are many different color encoding schemas. We can represent color using discrete values for the primary colors red, green, and blue.
 
-COLOR TABLE
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Color_Table.png?raw=true" width="500"></p>
 
 An `RGB` (red-green-blue) color system can be represented using hex or decimal values.
 
-COLORS SLIDER SCREENSHOTS
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true" width="500"></p>
 
 The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green-Blue color sliders, you've seen a 3 byte (24-bit) color system in action.
 
