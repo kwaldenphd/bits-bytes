@@ -134,20 +134,140 @@ WIKI SCREENSHOT
 
 ## File Formats
 
-Compare txt, rtf, word, and pdf.
+FILE FORMATS IMAGE
 
-Open in processing programs vs plain-text systems.
+Hello world file in four formats:
+- txt
+- rtf
+- docx
 
-BRING IN EXCEL/CSV HERE TOO
+Open all in word processing programs- look the same
+
+Open in text editors- look very different
+
+Example of encoding schema and file formats in action
+
+Pull txt and rtf into hex editor
+
+Explain what's going on in hex
+
+Modify txt using hex
+
+How this relates/connects to file size
+
+Another example of proprietary vs open formats- CSV vs Excel
+
+Similar thing with two examples, open in spreadsheet programs vs text editors
+
+Don't do the same thing with hex editor for the tabular data
 
 ### Key Terms
 
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
+
+**Proprietary File Formats**
+- "We will say that a file format is proprietary if the mode of presentation of its data is opaque and its specification is not publicly available. Proprietary formats are developed by software companies in order to encode data produced by their applications: only the software produced by a company who owns the specification of a file format will be able to read correctly and completely the data contained in this file. Proprietary formats can be further protected through the use of patents and the owner of the patent can ask royalties for the use or implementation of the formats in third-party's software" ([OpenFormats.org](https://web.archive.org/web/20081112110558/http://www.openformats.org/en1))
+- Common proprietary formats include:
+  * `PDF` (Adobe Portable Document Format)
+  * `DOCX` (Microsoft Word Document)
+  * `XLSX` (Microsoft Excel Document)
+
+**Open File Formats**
+- "We will say that a file format is open if the mode of presentation of its data is transparent and/or its specification is publicly available. Open formats are ordinarily standards fixed by public authorities or international institutions whose aim is to establish norms for software interoperability. There are nevertheless cases of open formats promoted by software companies which choose to make the specification of the formats used by their products publicly available…an open format can either be coded in a transparent way (readable in any text editor) or in a binary mode (unreadable in a text editor but thoroughly decodable once the format specifications are known)” ([OpenFormats.org](https://web.archive.org/web/20081112110558/http://www.openformats.org/en1))
+- Common open formats include:
+  * `TXT` (plain-text)
+  * `CSV` (comma-separated value)
+  * `HTML` (hyper-text markup language)
+  * `PNG` (portable network graphic)
+
+**File Manager (or File Browser)**
+- "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
+- Examples: Finder (Mac), File Explorer (Windows)
+
+COMPREHENSION CHECK
+
+Describe proprietary in your own words
+
+Describe open in your own words
+
+What's NOT an example of proprietary
+
+What's NOT an example of open
+
+Why do formats matter/how do they relate to encoding
+
 ### Application
 
+QX: Open the `hello-world.txt` file in a hex editor. How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
+
+QX: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
+- HINT: Open the `hello-world.rtf` file in a hex editor and compare with the `.txt` file.
+
+## Representing Other Information in Binary
+
+The end of the "Binary Number Systems" lecture mentioned how binary numbers are also used to represent things other than numbers, text, or characters.
+
+BIT COMPARISON IMAGE
+
+What about color? If we use a single byte or 8-bits to represent color, we can represent a total of 256 different colors. However, we perceive a much wider range of colors, so to extend the palette we can represent colors using more bits. 
+
+<fig>
+ <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_13.png?raw=true"></p>
+ <p align="center"><figcaption>Image from http://i.imgur.com/UqHhN.png</figcaption></p>
+ </fig>
+
+Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
+
+HOT AIR BALLOONS DIAGRAM
+
+In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
+
+PRIMARY COLOR VENN DIAGRAM
+
+As with text encoding standards, there are many different color encoding schemas. We can represent color using discrete values for the primary colors red, green, and blue.
+
+COLOR TABLE
+
+An `RGB` (red-green-blue) color system can be represented using hex or decimal values.
+
+COLORS SLIDER SCREENSHOTS
+
+The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green-Blue color sliders, you've seen a 3 byte (24-bit) color system in action.
+
+COMPREHENSION CHECK
+
+If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
+
+In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?
+
+How would we represent red using binary, using decimal
+
+### Key Terms
+
+x-bit color system
+
+hexadecimal
+
+RGB color
 
 
+### Application
 
-## Representing Other Information
+QX: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.
 
+## Putting It All Together
 
+In a future lab, we'll spend more time working with image files and encoding. But digital sound represents another example of file formats and encoding in action. The image below shows a 16-bit sound sample.
 
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_19.jpg?raw=true"></p>
+
+Digital sound recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
+
+The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. It's not likely you will have to work with the machine at this level. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
+
+### Final Questions
+
+QX: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
+
+QX: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
