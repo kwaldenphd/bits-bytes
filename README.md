@@ -23,10 +23,14 @@ By the end of this lab you will be able to:
 
 Sections of this lab were adapted from the "Project 1: Binary, Bits, and Basics" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
+The "Binary Number Systems" and "Encoding Schema" lecture segments were adapted from the following PBS *[Crash Course Computer Science](https://www.pbs.org/show/crash-course-computer-science/)* episodes:
+- "[Representing Numbers and Letters With Binary](https://www.pbs.org/video/representing-numbers-and-letters-with-binary-crash-course-c-pgrlei/)"
+- "[Boolean Logic & Logic Gates](https://www.pbs.org/video/boolean-logic-logic-gates-crash-course-computer-science-nobmpt/)"
+
 ## Table of Contents
-- [Lecture & Live Coding](#lecture-live-coding)
+- [Lecture & Live Coding](#lecture--live-coding)
 - [Lab Notebook Template](#lab-notebook-template)
-- [Physical, Logical & Conceptual Objects](#physical-logical-conceptual-objects)
+- [Physical, Logical & Conceptual Objects](#physical-logical--conceptual-objects)
 - [Binary Number Systems](#binary-number-systems)
 - [Encoding Schema](#encoding-schema)
 - [File Formats](#file-formats)
