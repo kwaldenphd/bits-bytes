@@ -81,9 +81,9 @@ This lab will explore the relationship between the logical and conceptual object
 
 ### Application
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Decimal_Number_Systems.gif?raw=true" width="500"></p>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p>
+<table><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Decimal_Number_Systems.gif?raw=true" width="500"></p></td>
+ <td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p></td></tr>
+ <tr><td>Converting decimal numbers</td><td>Converting binary numbers</td></tr></table>
 
 Resources:
 - [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
@@ -203,11 +203,11 @@ Don't do the same thing with hex editor for the tabular data
   
 ### Application
 
-QX: Why does the proprietary versus open file format distinction matter in relation to character encoding?
+Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
-QX: Open the `hello-world.txt` file in a hex editor. How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
+Q5: Open the `hello-world.txt` file in a hex editor. How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
 
-QX: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
+Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
 - HINT: Open the `hello-world.rtf` file in a hex editor and compare with the `.txt` file.
 
 ## Representing Other Information in Binary
@@ -270,7 +270,7 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
 
 ### Application
 
-QX: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
+Q7: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
 - [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
 ## Putting It All Together
@@ -285,6 +285,6 @@ The important take away here is that any piece of information can be represented
 
 ### Final Questions
 
-QX: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
+Q8: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
 
-QX: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
+Q9: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
