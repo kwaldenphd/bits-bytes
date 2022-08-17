@@ -1,17 +1,13 @@
-# Bits, Bytes, and Basics: Binary math and encoding schema lab
+# Binary Number Systems & Encoding Schema
 
-This tutorial was written by [Lindsay K. Mattock](http://lindsaymattock.net) and adapted by [Katherine Walden](https://github.com/kwaldenphd). 
-
-<a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
-This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>This tutorial was written by Katherine Walden and is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 ## Lab Overview and Goals
 
 In this lab, we are going to explore how information is represented in binary code. Binary code is the machine code or machine language. These are the 1’s and 0’s that represent the bits and Bytes that make up computer programs or the data processed by the computer. Everything that you see on your computer screen can be reduced to binary code, although most users of computers have few reasons to interact with the computer at this level. This will be one of the rare times when you will manipulate binary data, but this project provides an opportunity to further explore the relationship between what you seen on the screen and what is going on inside the machine.
 
 By the end of this lab you will be able to:
--	Calculate the value of Bytes using binary addition
--	Read a binary clock
+-	Calculate the value of bytes using binary addition
 -	Explain how text and color are represented in binary
 -	Use a hex editor to manipulate binary code
 -	Define the relationship between the logical, physical, and conceptual facets of a digital object
@@ -19,39 +15,28 @@ By the end of this lab you will be able to:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7aa5dfc9-5411-473f-a61b-ad380157d09d">Lab overview</a></td>
-  </tr>
-  </table>
-  
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4299d96e-dbd7-4f12-b6ec-ae5101727eb0">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=517ac0ae-6466-4508-9264-aef401054b25">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
 ## Acknowledgements
 
-This lab is based on the "Project 1: Binary, Bits, and Basics" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
+Sections of this lab were adapted from the "Project 1: Binary, Bits, and Basics" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
-# Table of Contents
-
-- [Lecture and Live Coding](#lecture-and-live-coding)
+## Table of Contents
+- [Lecture & Live Coding](#lecture-live-coding)
 - [Lab Notebook Template](#lab-notebook-template)
-- [Overview of Key Concepts](#overview-of-key-concepts)
-- [Bits](#bits)
-  * [What is a bit?](#what-is-a-bit)
-  * [Representing Numbers in Bytes](#representing-numbers-in-bytes)
-  * [Reading a Binary Clock](#reading-a-binary-clock)
-  * [Representing Other Information in Binary](#representing-other-information-in-binary)
-- [Representing Other Information](#representing-other-information)
-- [Hex and Bitstreams](#hex-and-bitstreams)
-  * [Manipulating Bitstreams with a Hex Editor](#manipulating-bitstreams-with-a-hex-editor)
+- [Physical, Logical & Conceptual Objects](#physical-logical-conceptual-objects)
+- [Binary Number Systems](#binary-number-systems)
+- [Encoding Schema](#encoding-schema)
+- [File Formats](#file-formats)
+- [Representing Other Information in Binary](#representing-other-information-in-binary)
+- [Putting It All Together](#putting-it-all-together)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
-# Lecture and Live Coding
+## Lecture & Live Coding
 
-Throughout this lab, you will see a Panopto icon at the start of select sections.
+Throughout this lab, you will see a Panopto icon at the start of each section.
 
 This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
 
@@ -62,407 +47,303 @@ Example:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7aa5dfc9-5411-473f-a61b-ad380157d09d">Lab overview</a></td>
-  </tr>
-  </table>
-  
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4299d96e-dbd7-4f12-b6ec-ae5101727eb0">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=517ac0ae-6466-4508-9264-aef401054b25">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
 # Lab Notebook Template
 
-[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
+[Link to lab notebook template](https://docs.google.com/document/d/172KM0g9zsvhJeeWzvUszeqCxfJOWMulwetfx8hLCu9M/copy) (ND users, Google Doc)
 
-# Overview of Key Concepts
+# Physical, Logical & Conceptual Objects
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_1.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_1.jpg?raw=true" width="500"></p>
 
 "As physical objects, consisting of ‘inscriptions’ (usually binary states of ‘on-ness’ or ‘off-ness’) on carrier media such as computer disks or tapes. (Despite the impression of that they exist in ‘cyberspace’, even online resources must exist on physical carriers somewhere)”
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.png?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_2.png?raw=true" width="500"></p>
 
 "As logical objects consisting of computer readable code, whose existence at any particular time depends on the physical inscriptions but is not tied to any particular carrier”
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Main_Building_at_the_University_of_Notre_Dame.jpg"></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Main_Building_at_the_University_of_Notre_Dame.jpg" width="500"></p>
 
 "As conceptual objects that have meaning to humans, unlike the logical or physical objects that encode them at any particular time. (This is recognisable as the performance presented to a user)”
 
 This lab will explore the relationship between the logical and conceptual object – the bits and bytes that the computer translates into the representations of information on the screen that we can understand.
 
-# Bits
+# Binary Number Systems
 
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5ba05165-ec5a-45f6-b0a8-ad38014ded42">Binary Number Systems</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=248cf9cd-9aa7-4175-bd96-aef30144f577">Binary Number Systems</a></td>
   </tr>
   </table>
+  
+## Key Terms
 
-## What is a bit?
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bits_Bytes_Image.png?raw=true" width="500"></p>
 
-As you read in Petzold this week, bits are the smallest unit of storage in a binary system - that is, the smallest unit of information processed by a computer. Information is stored as 0 or 1. You are probably more familiar with the term Byte – a group of 8 bits.
+**Bits**
+- "The bit is a basic unit of information in information theory, computing, including digital communications. As a binary digit, the bit represents a logical state, having only one of two values. It may be physically implemented with a two-state device. These values are most commonly represented as either 0 or 1" ([Wikipedia](https://en.wikipedia.org/wiki/Bit))
 
+**Bytes**
+- "The byte is a unit of digital information that most commonly consists of eight bits. Historically, the byte was the number of bits used to encode a single character of text in a computer and for this reason it is the smallest addressable unit of memory in many computer architectures" ([Wikipedia](https://en.wikipedia.org/wiki/Byte))
+
+**Binary**
+- "In mathematics and digital electronics, a binary number is a number expressed in the base-2 numeral system or binary numeral system, which uses only two symbols: typically ‘0’ (zero) and ‘1’ (one). The base-2 numeral system is a positional notation... Each digit is referred to as a bit. Because of its straightforward implementation in digital electronic circuitry using logic gates, the binary system is used by almost all modern computers and computer-based devices" ([Wikipedia](https://en.wikipedia.org/wiki/Binary))
+
+**Unit Conversions**
 - Kilobyte KB = 1,000 Bytes 
 - Megabyte MB = 1 million Bytes 
 - Gigabyte GB = 1 billion Bytes 
 - Terabyte TB = 1 trillion Bytes
-  * One bit gives us two patterns: `1 and 0`. 
-  * 2 bits allow for four patterns: `00, 11, 01, 10`.
-  * Every time we add one bit to the length of our bitstring, we double the number of available patterns. 
-  * So, 8 bits or 1 Byte provides a means for representing 256 different patterns, as illustrated in this chart:
 
-- 1 bit – 2 patterns (21)
-- 2 bits – 4 (22)
-- 3 bits – 8 (23)
-- 4 bits – 16 (24)
-- 5 bits – 32 (25)
-- 6 bits – 64 (26)
-- 7 bits – 128 (27)
-- 8 bits – 256 (28)
-- n bits -  2n patterns
+**Pattern Ranges**
+- One bit gives us two patterns: `1 and 0`. Two bits allow for four patterns: `00, 11, 01, 10`.
+- Every time we add one bit to the length of our bitstring, we double the number of available patterns. So, 8 bits or 1 byte provides a means for representing 256 different patterns, as illustrated below:
 
-## Representing Numbers in Bytes
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Pattern_Ranges.png?raw=true" width="500"></p>
 
-5. Some of the first computers were calculators, so we’ll start with numbers. If 8 bits or 1 Byte provides 256 patterns, then we can represent 256 numbers in binary. So, how does this work? To start, in binary math a 1 has a value or is “on” while a 0 does not have a value or is “off.”
-
-<blockquote>Q1: If 8 bits or 1 Byte can represent 256 patterns, what is the range of positive integers that can be represented in a single Byte? (e.g. 1-10)</blockquote>
-
-6. Following the logic from the chart in section 1, each bit represents 2<sup>n</sup> power. 
-
-7. In binary math we move from right to left, growing exponentially as we go. Each n grows by one representing the growth in the number of “bits” of information we can encode. 
-
-<blockquote>**Reminder: Anything to the power of “0” = 1.</blockquote>
-
-8. The following illustrates how you would calculate the value of the Byte `11111111`. 
-
-9. Starting on the left our first 1 represents 20 or 1, the second 21 or 2, and so on until we reach our eighth 1 which equals 27 or 128. 
-
-10. To calculate the total value of this Byte, you add up all of the orange numbers.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_4.png?raw=true"></p>
-
-<blockquote>Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?</blockquote>
-
-<blockquote>Q3: Using the diagram above, what would a Byte representing the number 0 look like?</blockquote>
-
-11. Now let’s do some basic binary math. Consider the Byte `00010101`. How do we convert this to a number?
-
-12. In this case, the `0s = 0`. Remember, `0` = off. The 1s will have a value. So, to calculate the value of this Byte we carry down the value of each of the `1`s in the bitstring starting on the right and working to the left.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_5.png?raw=true"></p>
-
-13. So, this Byte has the value of 16 + 4 + 1 or 21.
-
-<blockquote>Q4: Using the same logic, calculate the value of the Byte <code>01101101</code>.</blockquote>
-
-<blockquote>Q5: Now try working the other way. How would you represent the decimal number 40 in binary? (Hint: this doesn’t involve any advanced math, take a look at the orange numbers in the diagram above.)</blockquote>
-
-14. You can check your answers with the Decimal – Hexadecimal – Binary Conversion Table at https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf. For now, look at the Decimal column for your number and the Binary column for the correct binary representation.
-
-15. You can also add, subtract, divide, and multiply in binary, see https://web.archive.org/web/20170427003527/http://academic.evergreen.edu/projects/biophysics/technotes/misc/bin_math.htm.
+  * 1 bit – 2 patterns (21)
+  * 2 bits – 4 (22)
+  * 3 bits – 8 (23)
+  * 4 bits – 16 (24)
+  * 5 bits – 32 (25)
+  * 6 bits – 64 (26)
+  * 7 bits – 128 (27)
+  * 8 bits – 256 (28)
+  * n bits -  2n patterns
 
 <table>
  <tr><td>
 <img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
-  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfa1NmlA5FGw4wHylcYQSbs8AdKopbn0pvIZSgcZM1ZgiBQCw/viewform?usp=sf_link">Binary Math Lecture Check-In</a></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScQoRbyDYB2Cisg_AmfMhUqj8qXn0ZbeuembRhQpOnbb64I2g/viewform?usp=sf_link">Binary Number Systems Comprehension Check</a></td>
   </tr>
   </table>
 
-## Reading a Binary Clock
+## Application
 
-16. Now that you understand the basics of binary addition, you can read a binary clock. A binary clock only requires a few bits to represent each of the numbers in a traditional HH:MM:SS representation of time.
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"><br>Converting binary numbers</p>
 
-17. The diagram from the previous example is flipped on its side, so that the bits are added from bottom to top rather than right to left. From top to bottom each bit grows exponentially, as with our previous 8 bit example.
+Resources:
+- [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
+- [WikiHow, "How to Convert Binary to Decimal" (26 July 2022)](https://www.wikihow.com/Convert-from-Binary-to-Decimal)
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_6.png?raw=true"></p>
+Q1: What would a byte representing the decimal number `0` look like? 
 
-18. So, if we wanted to represent the time 9:10:25 AM, it would look like this (orange = on or 1, black = off or 0:
+Q2: Calculate the value of byte 01101101.
 
-19. In the example above, the first digit of the hours has no bits “on” so the total is 0. In the second, the first and fourth are on representing 1 and 8, so we add these together to total 9. The one bit of the first minutes position is on for the 1 in our 10, the second is off for the 0 in the 10. 
+Q3: How would you representing the decimal number 40 using binary digits?
 
-20. In the first seconds column the second bit is on representing 2. And, in the final column the first and third bits are on, representing 1 and 4 to total to 5.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_7.png?raw=true"></p>
-
-21. Binary clocks typically represent Military or 24-hour time (for a chart see: http://militarytimechart.com/), so 9:10:25 PM would be represented as 21:10:25, like this:
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_8.png?raw=true"></p>
-
-22. Check out http://binary.onlineclock.net/ to see a binary clock in action.
-
-<blockquote>Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in this manner.</blockquote>
-
-<blockquote>Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.</blockquote>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_10.png?raw=true"></p>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_11.png?raw=true"></p>
-
-## Representing Other Information in Binary
+# Encoding Schema
 
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=60fc70ac-c9e6-4689-99df-ad8201623840">Encoding Schema</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=124b4fbb-7a33-4d0d-9cc9-aef3015169e6">Encoding Schema</a></td>
   </tr>
   </table>
 
-23. Today, computers are much more than calculators. All of the information that you see on your computer screen is processed as binary code. Remember, a single Byte can hold quite a bit of information, giving us 256 different opportunities to represent different pieces of information. 
+## Key Terms
 
-24. This means that we can take anything with less than 256 values and represent it in binary code. What about letters and numerals? Our alphabet A-Z and numbers 1-10 can be represented in one single Byte of information with lots of room to spare.
+<table border="0"><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_1.png?raw=true" width="500"></p></td>
+<td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_2.png?raw=true" width="500"></p></td></tr>
+<tr><td>Table 1a. R.W. Bemer, "<a href="https://web.archive.org/web/20131017062654/http://www.trailing-edge.com/~bobbemer/SURVEY.HTM">Survey of coded character representation</a>", Commun. ACM 3, No. 12, 639-641, 1960 Dec</td><td>Table 2. H.J. Smith, Jr., F.A. Williams, "<a href="https://web.archive.org/web/20131017062654/http://www.trailing-edge.com/~bobbemer/SURVEY.HTM">Survey of punched card codes</a>", Commun. ACM 3, 639 & 642, 1960 Dec</td></tr></table>
 
-25. Take for example the number 61. To represent the number as a decimal digit (that is a base-10 number from the first example) we can use one Byte:
+**Character encoding**
+- "Character encoding is used to represent a repertoire of characters by some kind of encoding system. Depending on the abstraction level and context, corresponding code points and the resulting code space may be regarded as bit patterns, octets, natural numbers, electrical pulses, etc. A character encoding is used in computation, data storage, and transmission of textual data" ([Wikipedia](https://en.wikipedia.org/wiki/Character_encoding))
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_12.png?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ASCII.png?raw=true" width="500"></p>
 
-<blockquote>1 + 4 + 8 + 16 + 32 = 61</blockquote>
+**American Standard Code for Information Interchange (ASCII)**
+- "A character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, and other devices. Most modern character-encoding schemes are based on ASCII, although they support many additional characters" ([Wikipedia](https://en.wikipedia.org/wiki/ASCII))
 
-26. But, what if we wanted to represent each of the individual characters 6 and 1 as numerals? This is where character encoding schemas come into the picture. 
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
 
-27. There are a number of different encoding schemas out there in the world, but we will use ASCII or the American Standard Code for Information Interchange as an example. See https://www.w3schools.com/charsets/ref_html_ascii.asp for more information on ASCII.
+Sample conversion table:
+<table><tr><th>Decimal</th><th>Hex</th><th>Binary</th><th>ASCII Character</th><th>Description</th></tr>
+ <tr><td>0</td><td>00</td><td>000000</td><td>NUL</td><td>Null character</td></tr>
+ <tr><td>48</td><td>30</td><td>0110000</td><td>1</td><td>Digit 1</td></tr>
+ <tr><td>65</td><td>42</td><td>1000001</td><td>A</td><td>Uppercase A</td></tr>
+ <tr><td>97</td><td>61</td><td>1100001</td><td>1</td><td>Lowercase a</td></tr></table> 
 
-28. Take another look at the Decimal – Hexadecimal – Binary Conversion Table at https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf. 
+[Click here](https://www.asciitable.xyz/) for a full ASCII conversion table.
 
-29. In the first example when we were calculating the decimal value of each of the Bytes, we used the decimal and binary columns. Now we’ll look at the ASCII and Binary columns.
+**Unicode**
+- "Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. The standard is maintained by the Unicode Consortium, and as of May 2019 the most recent version, Unicode 12.1, contains a repertoire of 137,994 characters (consisting of 137,766 graphic characters, 163 format characters and 65 control characters) covering 150 modern and historic scripts, as well as multiple symbol sets and emoji" ([Wikipedia](https://en.wikipedia.org/wiki/Unicode))
+- [Click here](https://home.unicode.org/basic-info/overview) to learn more about the Unicode consortium
 
-30. As the chart illustrates, each letter, number, or character has been assigned to a particular set of bits (0-32 are control characters, don’t worry about these). Looking the ASCII column you can see that the numeral 6 has been assigned to `00110110` and the numeral 1 to `00110001`.
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScOk5_z6dRF8WvPUezpyU78sI2bvVrdnySVmNfH9IUGnXYh0w/viewform?usp=sf_link">Encoding Schema Comprehension Check</a></td>
+  </tr>
+  </table>
 
-31. Note that these correspond to the decimal numbers 54 and 49. In this case instead of representing numbers, these particular Bytes were assigned to represent particular characters on the keyboard. 
+# File Formats
 
-32. So, while the decimal digit 61 can be represented in a single Byte `00111101`, the numeral 61 is represented in two ASCII Bytes `00110110 00110001`. 
+For this section of the lab, you'll need to download three different text files:
+- `hello_world.txt`
+- `hello_world.rtf`
+- `hello_world.docx`
 
-33. This is the set of Bytes that are returned to the computer when you type 6 and 1 in a word processing program. Words become just strings of ASCII Bytes. 
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/draft/files/hello-world-files.zip) to download all three files.
 
-34. The phrase “Hello World!” would appear in binary as:
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eefecb77-0cd9-407c-90ca-aef400fb57ec">File Formats</a></td>
+  </tr>
+  </table>
 
-`01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001`
+## Key Terms
 
-<blockquote>Q8: Notice that the phrase has a total of 10 letters and an exclamation point, but there are 12 Bytes in the bitstring above. Using the ASCII chart, explain why this is.</blockquote>
+**File Manager (or File Browser)**
+- "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
+- Examples: Finder (Mac), File Explorer (Windows)
 
-<blockquote>Q9: Given what you have just learned about ASCII encoding, is there a difference between the binary representations of “byte”, “Byte,” and “BYTE”?</blockquote>
+**File Extension (or Filename Extension)**
+- "A filename extension, file name extension or file extension is a suffix to the name of a computer file (e.g., `.txt`, `.docx`, `.md`). The extension indicates a characteristic of the file contents or its intended use. A filename extension is typically delimited from the rest of the filename with a full stop (period)" ([Wikipedia](https://en.wikipedia.org/wiki/Filename_extension))
 
-35. Before ASCII encoding was standardized in the early 1980s, different computers would use different standards for encoding text. Computers were programmed by punching the binary code into cardboard cards called Punched Cards. 
+**Proprietary File Formats**
+- "We will say that a file format is proprietary if the mode of presentation of its data is opaque and its specification is not publicly available. Proprietary formats are developed by software companies in order to encode data produced by their applications: only the software produced by a company who owns the specification of a file format will be able to read correctly and completely the data contained in this file. Proprietary formats can be further protected through the use of patents and the owner of the patent can ask royalties for the use or implementation of the formats in third-party's software" ([OpenFormats.org](https://web.archive.org/web/20081112110558/http://www.openformats.org/en1))
+- Common proprietary formats include:
+  * `PDF` (Adobe Portable Document Format)
+  * `DOCX` (Microsoft Word Document)
+  * `XLSX` (Microsoft Excel Document)
 
-36. Take a few minutes to explore the different standards and punch a virtual card with the Punch Card Emulator http://www.kloth.net/services/cardpunch.php. You can learn more about Punched Cards at http://homepage.cs.uiowa.edu/~jones/cards/codes.html.
+**Open File Formats**
+- "We will say that a file format is open if the mode of presentation of its data is transparent and/or its specification is publicly available. Open formats are ordinarily standards fixed by public authorities or international institutions whose aim is to establish norms for software interoperability. There are nevertheless cases of open formats promoted by software companies which choose to make the specification of the formats used by their products publicly available…an open format can either be coded in a transparent way (readable in any text editor) or in a binary mode (unreadable in a text editor but thoroughly decodable once the format specifications are known)” ([OpenFormats.org](https://web.archive.org/web/20081112110558/http://www.openformats.org/en1))
+- Common open formats include:
+  * `TXT` (plain-text)
+  * `CSV` (comma-separated value)
+  * `HTML` (hyper-text markup language)
+  * `PNG` (portable network graphic)
 
-<blockquote>Q10: Look closely at the ASCII column of the ASCII chart. As a 1 Byte encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).</blockquote>
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
 
-# Representing Other Information
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyt0uZ05pfAf_IFJEC-_t55dfCGBERoNlLWfWSqI9pO_VoYw/viewform?usp=sf_link">File Formats Comprehension Check</a></td>
+  </tr>
+  </table>
+  
+## Application
 
-37. Again, all of the information that you encounter on your computer is processed as binary code. With a single Byte we can represent 256 discrete pieces of information – any information that we’d like. 
+Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
-38. What about color? If we use a single Byte or 8-bits to represent color, we can represent a total of 256 different colors. However, we perceive a much wider range of colors, so to extend the palette we can represent colors using more bits. 
+Q5: Open the `hello-world.txt` file in a hex editor ([HexEd.it](https://hexed.it/)). How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
 
-39. As with text encoding standards, there are many different color encoding schemas. Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. 
+Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
+- HINT: Open the `hello-world.rtf` file in a hex editor ([HexEd.it](https://hexed.it/)) and compare with the `.txt` file.
+
+# Representing Other Information in Binary
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fabb1a9f-de9e-4bcd-94b4-aef400c1a6c9">Representing Color</a></td>
+  </tr>
+  </table>
+
+The end of the "Encoding Schema" lecture mentioned how binary numbers are also used to represent things other than numbers, text, or characters.
+
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bit_Comparison.png?raw=true" width="500"></p>
+
+What about color? If we use a single byte or 8-bits to represent color, we can represent a total of 256 different colors. However, we perceive a much wider range of colors, so to extend the palette we can represent colors using more bits. 
 
 <fig>
  <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_13.png?raw=true"></p>
  <p align="center"><figcaption>Image from http://i.imgur.com/UqHhN.png</figcaption></p>
  </fig>
 
-40. Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
+Consider the difference between the color palette on old video game systems as compared to what you see on your computer screen today. Mario is a great example. The original Nintendo used 8-bit color, but Super Nintendo used 16-bit color giving a wider range of colors to represent the graphics in the game.
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_14.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Hot_Air_Balloons.png?raw=true" width="500"></p>
 
-41. In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
+In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
 
-42. But, if you recall, the primary colors of light are red, green, and blue. What if we decided to represent each of these primary colors in their own Byte of information?
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true" height="500"></p>
 
-<blockquote>Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?</blockquote>
+As with text encoding standards, there are many different color encoding schemas. We can represent color using discrete values for the primary colors red, green, and blue.
 
-43. Each Byte gives us 256 different patterns, so to calculate the total number of colors available in three Bytes we take 256 x 256 x 256 or 16,777,216.
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Color_Table.png?raw=true" width="500"></p>
 
-<blockquote>Q12: In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?</blockquote>
+An `RGB` (red-green-blue) color system can be represented using hex or decimal values.
 
-44. In our Mario examples, we looked at 8-bit and 16-bit color. This particular encoding of colors across 3 Bytes is 24-bit color or 24-bit RGB for Red Green and Blue. If you’ve played with the color sliders in Microsoft Office, then you’ve seen 24-bit color in action.
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true" height="500"></p>
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true"></p>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_16.png?raw=true"></p>
-
-45. In the left image above, all three colors (red green and blue) are set to their maximum value or 255. 
-
-46. As the color chart illustrates, white is created by blending all of the colors together. So to create white in 24-bit RGB color, all three Bytes are set to 1s: <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>. Remember from our addition exercises the total decimal value for the Byte <code>11111111</code> is 255.
-
-47. The color black is the absence of light, so the color black is represented as 0s. <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true"></p>
-
-48. This means that the color red can be represented as: <code><font color="red">111111</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">255</font>, <font color="green">0</font>, <font color="blue">0</font></code>)
-
-49. Green can be represented as: <code><font color="red">000000</font> <font color="green">111111</font> <font color="blue">00000000</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">255</font>, <font color="blue">0</font></code>)
-
-50. And, blue can be represented as: <code><font color="red">000000</font> <font color="green">000000</font> <font color="blue">111111</font></code> (equal to the decimal digits <code><font color="red">0</font>, <font color="green">0</font>, <font color="blue">255</font></code>)
-
-<blockquote>Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.</blockquote>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_18.png?raw=true"></p>
-
-51. So, in a 24-bit color digital image, the color for each pixel would be encoded as three Bytes.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_19.jpg?raw=true"></p>
-
-52. Digital sound is encoded in a similar way.  In the following image is an example of 16-bit encoded sound. Digital recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
-
-53. Don’t get caught in the details. The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. You will never have to work with the machine at this level. We’ll talk more about programming next week. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
+The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green-Blue color sliders, you've seen a 3 byte (24-bit) color system in action.
 
 <table>
  <tr><td>
 <img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
-  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSewas66ZOn2vZBeaJsfVA0-3u6DfBFRry0nK2cj1CMx8R_eyA/viewform?usp=sf_link">Encoding Schema Lecture Check-In</a></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJMHhYmWaqMo7_Zl2o-RLVwpDVzPDAzSSr2egZdlGjGTf__A/viewform?usp=sf_link">Representing Color Comprehension Check</a></td>
   </tr>
   </table>
 
-# Hex and Bitstreams
+## Key Terms
 
-54. If you take a look at the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) from earlier, you will note that there are a few columns that we didn’t talk about – Octal and Hex. 
+**Color depth**
+- "Color depth, also known as bit depth, is either the number of bits used to indicate the color of a single pixel, or the number of bits used for each color component of a single pixel. Color depth expresses the precision with which the amount of each primary can be expressed; the other aspect is how broad a range of colors can be expressed (the gamut). The definition of both color precision and gamut is accomplished with a color encoding specification which assigns a digital code value to a location in a color space" ([Wikipedia](https://en.wikipedia.org/wiki/Color_depth))
 
-55. Petzold’s “Bytes and Hex” chapter explained the details of Hexidecimal encoding. What is important to understand here is that along with binary, there are other ways to represent numbers and string of Bytes or bitstreams.
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
 
-56. If binary is base-2 and decimal is base-10, then octal is base-8 and hexadecimal or hex is base-16. What this means for us is that we can represent more bits with fewer symbols. Hexidecimal code is a way of representing 8-bit Bytes in just two symbols.
+**RGB color model**
+- "The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers" ([Wikipedia](https://en.wikipedia.org/wiki/RGB_color_model))
 
-57. Take for example, the character `Z`. Look at your chart. In binary `Z` is represented as `01011010` (or the decimal digit 90). In hex this string of bits can be represented simply as `5A`.
+## Application
 
-<blockquote>Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.</blockquote>
+Q7: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
+- [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
-58. Our 24-bit color palette gives us another example. 
+# Putting It All Together
 
-59. Open the RGB Color Codes Chart (http://www.rapidtables.com/web/color/RGB_Color.htm) and select the color white. 
+In a future lab, we'll spend more time working with image files and encoding. But digital sound represents another example of file formats and encoding in action. The image below shows a 16-bit sound sample.
 
-60. Below the R, G, and B, you should see another code preceded by a # symbol. This is the hex code for the color. 
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_19.jpg?raw=true"></p>
 
-61. We can represent the color with the bits <code><font color="red">11111111</font> <font color="green">11111111</font> <font color="blue">11111111</font></code>, or we can use the corresponding decimal digits <code><font color="red">255</font> <font color="green">255</font> <font color="blue">255</font></code>, or we can use the hex value <code><font color="red">FF</font><font color="green">FF</font><font color="blue">FF</font></code>. 
+Digital sound recordings are created by taking samples of sound at a specific rate. “CD quality” sound is sampled at 44.1 kHz (kilohertz) or 44,100 times per second. This means that 44,100 times per second, a program measures and records the height of a sound’s sound wave and then translates the height to a binary representation in 16-bits or 2 Bytes.
 
-62. We will see later when we work with HTML that this is exactly how you name the color value that you would like to use in your formatting (see https://www.w3schools.com/colors/colors_picker.asp).
+The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. It's not likely you will have to work with the machine at this level. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
 
-## Manipulating Bitstreams with a Hex Editor
+## Final Questions
 
-63. Now that you are familiar with hex, we can experiment a bit with a hex editor. A hex editor is a program that allows for the direct manipulation of the binary data of a computer file.
+Q8: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
 
-64. First download the `hello_world.txt` file from the course website. 
-
-65. This is a plain text file, meaning that the text characters are encoded in a standard coding schema like ASCII. In this example, the text has been encoded in the Unicode UTF-8 standard. 
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_20.png?raw=true"></p>
-
-66. If you open the file you should see the familiar phrase “Hello World!”
-
-67. Now let’s look at the bits and Bytes that make up this file. 
-
-68. Open the HexEd.it hex editor at https://hexed.it/ in your web browser, and click “Open File” in the menu bar, and open `helloworld.txt` from your computer.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_21.jpg?raw=true"></p>
-
-69. The first set of numbers that you see on the left (`00000000`) is a reference to where you are in the file. 
-
-70. This not a particularly large file, so we only have one line to reference. In the middle of the screen we see each Byte represented in hex. And, on the right we see the interpreted text encoded according to UTF-8. Note that the “.” represents a space.
-
-<blockquote>Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?</blockquote>
-
-71. UTF-8 is very similar to ASCII, so you can use the Decimal – Hexadecimal – Binary Conversion Table (https://www.eecis.udel.edu/~amer/CISC651/ASCII-Conversion-Chart.pdf) to confirm that the hex corresponds to the encoded letter.
-
-72. Earlier we determined that “Hello World!” would look like this in binary:
-
-`01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001`
-
-73. As the chart demonstrates, the hex code `48 65 6C 6C 6F 20 57 6F 72 6C 64 21` is equivalent to this binary representation. Hex, is simply a short-hand for binary code.
-
-74. With the hex editor, you can modify this file by modifying the hex. Using the hex editor you are modifying the very bitstream (the binary representation of the file). 
-
-75. You can do this in two ways: 
-  a. selecting the text in the text pane and typing as you would in any text editor
-  b. using the Conversion Chart to write the hex in the hex panel
-
-<blockquote>Q16: Using the hex editor, modify either the hexadecimal values or the character values. If modifying the hexadecimal values, note how the characters change. If modifying the characters, note how the hexadecimal values change. Describe and explain this process in your notebook.</blockquote>
-
-76. Now, download `helloworld.rtf` from our course site. An `.rtf` file is one saved in a Rich Text Format. 
-
-77. Note that the text is the same as the previous file; however the `.rtf` specification allows for more formatting than an Plain Text file, which means that the information contained within the file is encoded differently. 
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_22.png?raw=true"></p>
-
-78. You’ll notice that we have a few formatting options with Rich Text, such as font, style, size, and color. (If you are curious, you can review the RTF format specs at http://www.biblioscape.com/rtf15_spec.htm).
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_23.png?raw=true"></p>
-
-79. Open `helloworld.rtf` in the text editor. 
-
-80. Looking at the text pane, you can now see the binary code interpreted. Our text that we see when we open the file in the text editor is at the very bottom of the file before the end `}`. 
-
-81. The rest of the information is the formatting information for the `.rtf` file. This is hidden from us when we open the file normally, but interpreted behind the scenes by the text editing program.
-
-<blockquote>Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?</blockquote>
-
-<blockquote>Q18: How large is this file in Bytes? How does this compare to the .txt file?</blockquote>
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_24.png?raw=true"></p>
-
-82. Now let’s compare the `.txt` and `.rtf` files to a Word Document. 
-
-83. Download the `helloworld.docx` file from the course site. As with the other two examples, the text is the same.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_25.png?raw=true"></p>
-
-84. Now open `helloworld.docx` in the hex editor.
-
-85. This file should look completely different. In this case, we have a much larger file (almost twice the size) with more information encoded. The text pane on the right no longer makes sense because this information is encoded for the machine and not for us. 
-
-86. `.rtf` files are a relatively simply file format and it just so happens that the information is encoded in a way that we can translate the information when it is decoded as text. This isn’t always true, as we can see with the Word document.
-
-87. As with the `.rtf` what you see here is all of the information that the machine needs to render the file in the way that you see it when you open the file in Word. Unlike the `.txt` and `.rtf` files, the information is encoded in a way that cannot be easily interpreted by us.
-
-<blockquote>Q19: What information about this file can you identify in the hex editor?</blockquote>
-
-<blockquote>Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.</blockquote>
+Q9: Using the definitions of physical, logical, and conceptual objects from earlier in this lab, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
 
 # Lab Notebook Questions
 
-[Link to lab notebook template](https://docs.google.com/document/d/1e3wtG11206N4sP4s6OlwPTcqDBRa17GwwFpvLI9PXjs/copy) (ND users, Google Doc)
+[Link to lab notebook template](https://docs.google.com/document/d/172KM0g9zsvhJeeWzvUszeqCxfJOWMulwetfx8hLCu9M/copy) (ND users, Google Doc)
 
-All of the required questions are listed here for you to reference. Be sure to answer each question completely, including an explanation of how you arrived at your answer.
+Resources for Q1-Q3:
+- [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
+- [WikiHow, "How to Convert Binary to Decimal" (26 July 2022)](https://www.wikihow.com/Convert-from-Binary-to-Decimal)
 
-Q1: If 8 bits or 1 Byte can represent 256 patterns, what is the range of positive integers that can be represented in a single Byte? (e.g. 1-10)
+Q1: What would a byte representing the decimal number `0` look like? 
 
-Q2: What is the sum of 1+2+4+8+16+32+64+128? Given the total, do you need to revise your response to Q1?
+Q2: Calculate the value of byte 01101101.
 
-Q3: Using the diagram above, what would a Byte representing the number 0 look like?
+Q3: How would you representing the decimal number 40 using binary digits?
 
-Q4: Using the same logic, calculate the value of the Byte `01101101`.
+Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
-Q5: Now try working the other way. How would you represent the decimal number 40 in binary? (Hint: this doesn’t involve any advanced math, take a look at the orange numbers in the diagram above.)
+Q5: Open the `hello-world.txt` file in a hex editor ([HexEd.it](https://hexed.it/)). How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
 
-Q6: In your own words, explain why we only need 4 bits for the second digit of the hours, minutes, and seconds; 3 bits for the first digit of the seconds and minutes; and 2 bits for the first digit of the hours to represent time in this manner.
+Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
+- HINT: Open the `hello-world.rtf` file in a hex editor ([HexEd.it](https://hexed.it/)) and compare with the `.txt` file.
 
-Q7: What time is represented in the following two examples? Please give your answers in 24-hour time and in traditional 12-hour time.
+Q7: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
+- [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
-Q8: Notice that the phrase has a total of 10 letters and an exclamation point, but there are 12 Bytes in the bitstring above. Using the ASCII chart, explain why this is.
+Q8: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
 
-Q9: Given what you have just learned about ASCII encoding, is there a difference between the binary representations of “byte”, “Byte,” and “BYTE”?
-
-Q10:  Look closely at the ASCII column of the ASCII chart. As a 1 Byte encoding schema, what limitations do you see? (Hint: compare the ASCII chart to the chart at https://unicode-table.com).
-
-Q11: If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
-
-Q12: In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?
-
-Q13: Given this logic, how would the colors Magenta, Cyan, and Yellow be represented in binary? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.
-
-Q14: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
-
-Q15: Based on what you see in the hex editor, how large would you expect this file to be in bits and Bytes?
-
-Q16: Using the hex editor, modify either the hexadecimal values or the character values. If modifying the hexadecimal values, note how the characters change. If modifying the characters, note how the hexadecimal values change. Describe and explain this process in your notebook.
-
-Q17: Take a look at the text pane, what formatting information can you interpret from the binary code?
-
-Q18: How large is this file in Bytes? How does this compare to the .txt file?
-
-Q19: What information about this file can you identify in the hex editor?
-
-Q20: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
+Q9: Using the definitions of physical, logical, and conceptual objects from earlier in this lab, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
