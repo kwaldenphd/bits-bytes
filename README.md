@@ -97,7 +97,12 @@ Q3: How would you representing the decimal number 40 using binary digits?
 
 ## Encoding Schema
 
-LIVE LECTURE LINK
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=124b4fbb-7a33-4d0d-9cc9-aef3015169e6">Encoding Schema</a></td>
+  </tr>
+  </table>
 
 ### Key Terms
 
@@ -124,8 +129,6 @@ Sample conversion table:
  <tr><td>97</td><td>61</td><td>1100001</td><td>1</td><td>Lowercase a</td></tr></table> 
 
 [Click here](https://www.asciitable.xyz/) for a full ASCII conversion table.
-
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Wiki_Encoding.png?raw=true" width="500"></p>
 
 **Unicode**
 - "Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. The standard is maintained by the Unicode Consortium, and as of May 2019 the most recent version, Unicode 12.1, contains a repertoire of 137,994 characters (consisting of 137,766 graphic characters, 163 format characters and 65 control characters) covering 150 modern and historic scripts, as well as multiple symbol sets and emoji" ([Wikipedia](https://en.wikipedia.org/wiki/Unicode))
@@ -191,19 +194,16 @@ Don't do the same thing with hex editor for the tabular data
 - "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
 - Examples: Finder (Mac), File Explorer (Windows)
 
-COMPREHENSION CHECK
-
-Describe proprietary in your own words
-
-Describe open in your own words
-
-What's NOT an example of proprietary
-
-What's NOT an example of open
-
-Why do formats matter/how do they relate to encoding
-
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyt0uZ05pfAf_IFJEC-_t55dfCGBERoNlLWfWSqI9pO_VoYw/viewform?usp=sf_link">File Formats Comprehension Check</a></td>
+  </tr>
+  </table>
+  
 ### Application
+
+QX: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
 QX: Open the `hello-world.txt` file in a hex editor. How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
 
@@ -212,7 +212,14 @@ QX: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this c
 
 ## Representing Other Information in Binary
 
-The end of the "Binary Number Systems" lecture mentioned how binary numbers are also used to represent things other than numbers, text, or characters.
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fabb1a9f-de9e-4bcd-94b4-aef400c1a6c9">Representing Color</a></td>
+  </tr>
+  </table>
+
+The end of the "Encoding Schema" lecture mentioned how binary numbers are also used to represent things other than numbers, text, or characters.
 
 <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bit_Comparison.png?raw=true" width="500"></p>
 
@@ -243,26 +250,28 @@ An `RGB` (red-green-blue) color system can be represented using hex or decimal v
 
 The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green-Blue color sliders, you've seen a 3 byte (24-bit) color system in action.
 
-COMPREHENSION CHECK
-
-If we represented each of the primary colors of light as a single Byte to create colors in three Bytes (one Byte for each color <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code>), how many different colors could be represented?
-
-In our three Byte string <code><font color="red">00000000</font> <font color="green">00000000</font> <font color="blue">00000000</font></code> how many bits are represented?
-
-How would we represent red using binary, using decimal
+<table>
+ <tr><td>
+<img src="https://www.freeiconspng.com/thumbs/survey-icon/survey-icon-12.png" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJMHhYmWaqMo7_Zl2o-RLVwpDVzPDAzSSr2egZdlGjGTf__A/viewform?usp=sf_link">Representing Color Comprehension Check</a></td>
+  </tr>
+  </table>
 
 ### Key Terms
 
-x-bit color system
+**Color depth**
+- "Color depth, also known as bit depth, is either the number of bits used to indicate the color of a single pixel, or the number of bits used for each color component of a single pixel. Color depth expresses the precision with which the amount of each primary can be expressed; the other aspect is how broad a range of colors can be expressed (the gamut). The definition of both color precision and gamut is accomplished with a color encoding specification which assigns a digital code value to a location in a color space" ([Wikipedia](https://en.wikipedia.org/wiki/Color_depth))
 
-hexadecimal
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
 
-RGB color
-
+**RGB color model**
+- "The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers" ([Wikipedia](https://en.wikipedia.org/wiki/RGB_color_model))
 
 ### Application
 
-QX: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? You can check your answers with this RGB Color Codes Chart http://www.rapidtables.com/web/color/RGB_Color.htm.
+QX: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
+- [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
 ## Putting It All Together
 
