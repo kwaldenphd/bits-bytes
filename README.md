@@ -1,16 +1,61 @@
-# Binary Number Systems
+# Binary Number Systems & Encoding Schema
 
-## CC statement
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>This tutorial was written by Katherine Walden and is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-## Overview/Goals
+## Lab Overview and Goals
+
+In this lab, we are going to explore how information is represented in binary code. Binary code is the machine code or machine language. These are the 1’s and 0’s that represent the bits and Bytes that make up computer programs or the data processed by the computer. Everything that you see on your computer screen can be reduced to binary code, although most users of computers have few reasons to interact with the computer at this level. This will be one of the rare times when you will manipulate binary data, but this project provides an opportunity to further explore the relationship between what you seen on the screen and what is going on inside the machine.
+
+By the end of this lab you will be able to:
+-	Calculate the value of bytes using binary addition
+-	Explain how text and color are represented in binary
+-	Use a hex editor to manipulate binary code
+-	Define the relationship between the logical, physical, and conceptual facets of a digital object
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=517ac0ae-6466-4508-9264-aef401054b25">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
 
 ## Acknowledgements
 
-## ToC
+Sections of this lab were adapted from the "Project 1: Binary, Bits, and Basics" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
-## Lecture/Live Coding
+## Table of Contents
+- [Lecture & Live Coding](#lecture-live-coding)
+- [Lab Notebook Template](#lab-notebook-template)
+- [Physical, Logical & Conceptual Objects](#physical-logical-conceptual-objects)
+- [Binary Number Systems](#binary-number-systems)
+- [Encoding Schema](#encoding-schema)
+- [File Formats](#file-formats)
+- [Representing Other Information in Binary](#representing-other-information-in-binary)
+- [Putting It All Together](#putting-it-all-together)
+- [Lab Notebook Questions](#lab-notebook-questions)
 
-## Overview
+## Lecture & Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of each section.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=517ac0ae-6466-4508-9264-aef401054b25">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
+# Lab Notebook Template
+
+[Link to lab notebook template](https://docs.google.com/document/d/172KM0g9zsvhJeeWzvUszeqCxfJOWMulwetfx8hLCu9M/copy) (ND users, Google Doc)
+
+# Physical, Logical & Conceptual Objects
 
 Librarians, archivists, and information professionals who work in digital preservation often think of digital technologies and digital objects as incorporating three layers: the physical object, the logical object, and the conceptual object. The following definitions are taken from UNESCO’s Guidelines for the Preservation of Digital Heritage, page 35 (available at http://unesdoc.unesco.org/images/0013/001300/130071e.pdf).
 
@@ -28,7 +73,7 @@ Librarians, archivists, and information professionals who work in digital preser
 
 This lab will explore the relationship between the logical and conceptual object – the bits and bytes that the computer translates into the representations of information on the screen that we can understand.
 
-## Binary Number Systems
+# Binary Number Systems
 
 <table>
  <tr><td>
@@ -37,7 +82,7 @@ This lab will explore the relationship between the logical and conceptual object
   </tr>
   </table>
   
-### Key Terms
+## Key Terms
 
 <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bits_Bytes_Image.png?raw=true" width="500"></p>
 
@@ -79,7 +124,7 @@ This lab will explore the relationship between the logical and conceptual object
   </tr>
   </table>
 
-### Application
+## Application
 
 <table><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Decimal_Number_Systems.gif?raw=true" width="500"></p></td>
  <td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p></td></tr>
@@ -95,7 +140,7 @@ Q2: Calculate the value of byte 01101101.
 
 Q3: How would you representing the decimal number 40 using binary digits?
 
-## Encoding Schema
+# Encoding Schema
 
 <table>
  <tr><td>
@@ -104,7 +149,7 @@ Q3: How would you representing the decimal number 40 using binary digits?
   </tr>
   </table>
 
-### Key Terms
+## Key Terms
 
 <table border="0"><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_1.png?raw=true" width="500"></p></td>
 <td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_2.png?raw=true" width="500"></p></td></tr>
@@ -141,7 +186,7 @@ Sample conversion table:
   </tr>
   </table>
 
-## File Formats
+# File Formats
 
 For this section of the lab, you'll need to download three different text files:
 - `hello_world.txt`
@@ -157,7 +202,7 @@ For this section of the lab, you'll need to download three different text files:
   </tr>
   </table>
 
-### Key Terms
+## Key Terms
 
 **File Manager (or File Browser)**
 - "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
@@ -191,7 +236,7 @@ For this section of the lab, you'll need to download three different text files:
   </tr>
   </table>
   
-### Application
+## Application
 
 Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
@@ -200,7 +245,7 @@ Q5: Open the `hello-world.txt` file in a hex editor ([HexEd.it](https://hexed.it
 Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
 - HINT: Open the `hello-world.rtf` file in a hex editor ([HexEd.it](https://hexed.it/)) and compare with the `.txt` file.
 
-## Representing Other Information in Binary
+# Representing Other Information in Binary
 
 <table>
  <tr><td>
@@ -245,7 +290,7 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
   </tr>
   </table>
 
-### Key Terms
+## Key Terms
 
 **Color depth**
 - "Color depth, also known as bit depth, is either the number of bits used to indicate the color of a single pixel, or the number of bits used for each color component of a single pixel. Color depth expresses the precision with which the amount of each primary can be expressed; the other aspect is how broad a range of colors can be expressed (the gamut). The definition of both color precision and gamut is accomplished with a color encoding specification which assigns a digital code value to a location in a color space" ([Wikipedia](https://en.wikipedia.org/wiki/Color_depth))
@@ -256,12 +301,12 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
 **RGB color model**
 - "The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers" ([Wikipedia](https://en.wikipedia.org/wiki/RGB_color_model))
 
-### Application
+## Application
 
 Q7: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
 - [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
-## Putting It All Together
+# Putting It All Together
 
 In a future lab, we'll spend more time working with image files and encoding. But digital sound represents another example of file formats and encoding in action. The image below shows a 16-bit sound sample.
 
@@ -271,8 +316,36 @@ Digital sound recordings are created by taking samples of sound at a specific ra
 
 The important take away here is that any piece of information can be represented in bits and then interpreted by the computer. It's not likely you will have to work with the machine at this level. For now, just know that behind the scenes everything that you input into the computer and everything that is outputted is at some point in the process a string of bits.
 
-### Final Questions
+## Final Questions
 
 Q8: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
 
-Q9: Using the definitions of physical, logical, and conceptual objects from page 1, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
+Q9: Using the definitions of physical, logical, and conceptual objects from earlier in this lab, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
+
+# Lab Notebook Questions
+
+[Link to lab notebook template](https://docs.google.com/document/d/172KM0g9zsvhJeeWzvUszeqCxfJOWMulwetfx8hLCu9M/copy) (ND users, Google Doc)
+
+Resources for Q1-Q3:
+- [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
+- [WikiHow, "How to Convert Binary to Decimal" (26 July 2022)](https://www.wikihow.com/Convert-from-Binary-to-Decimal)
+
+Q1: What would a byte representing the decimal number `0` look like? 
+
+Q2: Calculate the value of byte 01101101.
+
+Q3: How would you representing the decimal number 40 using binary digits?
+
+Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
+
+Q5: Open the `hello-world.txt` file in a hex editor ([HexEd.it](https://hexed.it/)). How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
+
+Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
+- HINT: Open the `hello-world.rtf` file in a hex editor ([HexEd.it](https://hexed.it/)) and compare with the `.txt` file.
+
+Q7: How would the colors Magenta, Cyan, and Yellow be represented in binary, hex, and decimal? 
+- [RGB Color Table](http://www.rapidtables.com/web/color/RGB_Color.htm)
+
+Q8: Take a moment to explain the difference between the decimal digit, the hex representation, and ASCII code in your own words.
+
+Q9: Using the definitions of physical, logical, and conceptual objects from earlier in this lab, explain these layers of a digital object in your own works, referring to the helloworld examples and your experience using the hex editor.
