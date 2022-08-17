@@ -143,37 +143,28 @@ Sample conversion table:
 
 ## File Formats
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/file_formats.jpg?raw=true" width="500"></p>
+For this section of the lab, you'll need to download three different text files:
+- `hello_world.txt`
+- `hello_world.rtf`
+- `hello_world.docx`
 
-Hello world file in four formats:
-- txt
-- rtf
-- docx
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/draft/files/hello-world-files.zip) to download all three files.
 
-Open all in word processing programs- look the same
-
-Open in text editors- look very different
-
-Example of encoding schema and file formats in action
-
-Pull txt and rtf into hex editor
-
-Explain what's going on in hex
-
-Modify txt using hex
-
-How this relates/connects to file size
-
-Another example of proprietary vs open formats- CSV vs Excel
-
-Similar thing with two examples, open in spreadsheet programs vs text editors
-
-Don't do the same thing with hex editor for the tabular data
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eefecb77-0cd9-407c-90ca-aef400fb57ec">File Formats</a></td>
+  </tr>
+  </table>
 
 ### Key Terms
 
-**Hexadecimal (hex)**
-- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
+**File Manager (or File Browser)**
+- "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
+- Examples: Finder (Mac), File Explorer (Windows)
+
+**File Extension (or Filename Extension)**
+- "A filename extension, file name extension or file extension is a suffix to the name of a computer file (e.g., `.txt`, `.docx`, `.md`). The extension indicates a characteristic of the file contents or its intended use. A filename extension is typically delimited from the rest of the filename with a full stop (period)" ([Wikipedia](https://en.wikipedia.org/wiki/Filename_extension))
 
 **Proprietary File Formats**
 - "We will say that a file format is proprietary if the mode of presentation of its data is opaque and its specification is not publicly available. Proprietary formats are developed by software companies in order to encode data produced by their applications: only the software produced by a company who owns the specification of a file format will be able to read correctly and completely the data contained in this file. Proprietary formats can be further protected through the use of patents and the owner of the patent can ask royalties for the use or implementation of the formats in third-party's software" ([OpenFormats.org](https://web.archive.org/web/20081112110558/http://www.openformats.org/en1))
@@ -190,9 +181,8 @@ Don't do the same thing with hex editor for the tabular data
   * `HTML` (hyper-text markup language)
   * `PNG` (portable network graphic)
 
-**File Manager (or File Browser)**
-- "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
-- Examples: Finder (Mac), File Explorer (Windows)
+**Hexadecimal (hex)**
+- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
 
 <table>
  <tr><td>
@@ -205,10 +195,10 @@ Don't do the same thing with hex editor for the tabular data
 
 Q4: Why does the proprietary versus open file format distinction matter in relation to character encoding?
 
-Q5: Open the `hello-world.txt` file in a hex editor. How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
+Q5: Open the `hello-world.txt` file in a hex editor ([HexEd.it](https://hexed.it/)). How large would you expect this file to be (in bits and bytes)? You can use the hex editor or your own computer's file manager to verify the file size.
 
 Q6: How large is the 'hello-world.rtf' file (in bits and bytes)? How does this compare to the `.txt` file? Why do these two files differ in size?
-- HINT: Open the `hello-world.rtf` file in a hex editor and compare with the `.txt` file.
+- HINT: Open the `hello-world.rtf` file in a hex editor ([HexEd.it](https://hexed.it/)) and compare with the `.txt` file.
 
 ## Representing Other Information in Binary
 
