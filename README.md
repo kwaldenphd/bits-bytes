@@ -126,9 +126,8 @@ This lab will explore the relationship between the logical and conceptual object
 
 ## Application
 
-<table><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Decimal_Number_Systems.gif?raw=true" width="500"></p></td>
- <td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p></td></tr>
- <tr><td>Converting decimal numbers</td><td>Converting binary numbers</td></tr></table>
+<table><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Binary_Conversion.png?raw=true" width="500"></p></td></tr>
+ <tr><td>Converting binary numbers</td></tr></table>
 
 Resources:
 - [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
