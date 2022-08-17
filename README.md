@@ -236,7 +236,7 @@ Consider the difference between the color palette on old video game systems as c
 
 In 8-bit color, each color is represented in 8-bits or 1 Byte giving a color palette of 256 colors.  16-bit color increases the number of colors in the palette by a factor of two, representing over 65,000 different colors by using 16-bits or 2 Bytes to represent each color (256 x 256 = 65,536). 
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true" width="500"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_17.png?raw=true" height="500"></p>
 
 <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_18.png?raw=true" width="500"></p>
 
@@ -246,7 +246,7 @@ As with text encoding standards, there are many different color encoding schemas
 
 An `RGB` (red-green-blue) color system can be represented using hex or decimal values.
 
-<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true" width="500"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Image_15.png?raw=true" height="500"></p>
 
 The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green-Blue color sliders, you've seen a 3 byte (24-bit) color system in action.
 
