@@ -27,8 +27,9 @@ The "Binary Number Systems" and "Encoding Schema" lecture segments were adapted 
 - "[Representing Numbers and Letters With Binary](https://www.pbs.org/video/representing-numbers-and-letters-with-binary-crash-course-c-pgrlei/)"
 - "[Boolean Logic & Logic Gates](https://www.pbs.org/video/boolean-logic-logic-gates-crash-course-computer-science-nobmpt/)"
 
-## Table of Contents
+# Table of Contents
 - [Lecture & Live Coding](#lecture--live-coding)
+- [Key Terms](#key-terms)
 - [Lab Notebook Template](#lab-notebook-template)
 - [Physical, Logical & Conceptual Objects](#physical-logical--conceptual-objects)
 - [Binary Number Systems](#binary-number-systems)
@@ -55,7 +56,11 @@ Example:
   </tr>
   </table>
 
-# Lab Notebook Template
+## Key Terms
+
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
+
+## Lab Notebook Template
 
 [Link to lab notebook template](https://docs.google.com/document/d/172KM0g9zsvhJeeWzvUszeqCxfJOWMulwetfx8hLCu9M/copy) (ND users, Google Doc)
 
@@ -120,6 +125,8 @@ This lab will explore the relationship between the logical and conceptual object
   * 7 bits – 128 (27)
   * 8 bits – 256 (28)
   * n bits -  2n patterns
+  
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
 
 ## Comprehension Check
 
@@ -232,8 +239,7 @@ For this section of the lab, you'll need to download three different text files:
   * `HTML` (hyper-text markup language)
   * `PNG` (portable network graphic)
 
-**Hexadecimal (hex)**
-- "In mathematics and computing, hexadecimal (also base 16, or hex) is a positional system that represents numbers using a base of 16. Unlike the common way of representing numbers with ten symbols, it uses sixteen distinct symbols, most often the symbols ‘0’–’9’ to represent values zero to nine, and ‘A’–’F’ (or alternatively ‘a’–’f’) to represent values ten to fifteen. Hexadecimal numerals are widely used by computer system designers and programmers, as they provide a human-friendly representation of binary-coded values. Each hexadecimal digit represents four binary digits…For example, a single byte can have values ranging from 00000000 to 11111111 in binary form, which can be conveniently represented as 00 to FF in hexadecimal" ([Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal))
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
 
 ## Comprehension Check
 
@@ -310,6 +316,8 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
 
 **RGB color model**
 - "The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers" ([Wikipedia](https://en.wikipedia.org/wiki/RGB_color_model))
+
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
 
 ## Application
 
