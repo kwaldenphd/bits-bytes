@@ -144,6 +144,7 @@ This lab will explore the relationship between the logical and conceptual object
 Resources:
 - [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
 - [WikiHow, "How to Convert Binary to Decimal" (26 July 2022)](https://www.wikihow.com/Convert-from-Binary-to-Decimal)
+- [WikiHow, "3 Ways to Convert from Decimal to Binary" (20 August 2022)](https://www.wikihow.com/Convert-from-Decimal-to-Binary)
 
 Q1: What would a byte representing the decimal number `0` look like? 
 
@@ -347,6 +348,7 @@ Q9: Using the definitions of physical, logical, and conceptual objects from earl
 Resources for Q1-Q3:
 - [Decimal – Hexadecimal – Binary Conversion Table](https://github.com/kwaldenphd/bits-bytes/blob/main/ASCII-Conversion-Chart.pdf)
 - [WikiHow, "How to Convert Binary to Decimal" (26 July 2022)](https://www.wikihow.com/Convert-from-Binary-to-Decimal)
+- [WikiHow, "3 Ways to Convert from Decimal to Binary" (20 August 2022)](https://www.wikihow.com/Convert-from-Decimal-to-Binary)
 
 Q1: What would a byte representing the decimal number `0` look like? 
 
