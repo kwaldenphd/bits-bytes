@@ -29,7 +29,7 @@ The "Binary Number Systems" and "Encoding Schema" lecture segments were adapted 
 
 # Table of Contents
 - [Lecture & Live Coding](#lecture--live-coding)
-- [Key Terms](#key-terms)
+- [Key Concepts](#key-concepts)
 - [Lab Notebook Template](#lab-notebook-template)
 - [Physical, Logical & Conceptual Objects](#physical-logical--conceptual-objects)
 - [Binary Number Systems](#binary-number-systems)
@@ -56,9 +56,9 @@ Example:
   </tr>
   </table>
 
-## Key Terms
+## Key Concepts
 
-[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-concepts.md) for the full list of key concepts and definitions for this lab.
 
 ## Lab Notebook Template
 
@@ -91,7 +91,7 @@ This lab will explore the relationship between the logical and conceptual object
   </tr>
   </table>
   
-## Key Terms
+## Key Concepts
 
 <p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/Bits_Bytes_Image.png?raw=true" width="500"></p>
 
@@ -126,7 +126,7 @@ This lab will explore the relationship between the logical and conceptual object
   * 8 bits – 256 (28)
   * n bits -  2n patterns
   
-[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-concepts.md) for the full list of key concepts and definitions for this lab.
 
 ## Comprehension Check
 
@@ -161,7 +161,7 @@ Q3: How would you representing the decimal number 40 using binary digits?
   </tr>
   </table>
 
-## Key Terms
+## Key Concepts
 
 <table border="0"><tr><td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_1.png?raw=true" width="500"></p></td>
 <td><p align="center"><img src="https://github.com/kwaldenphd/bits-bytes/blob/main/images/ACM_2.png?raw=true" width="500"></p></td></tr>
@@ -191,6 +191,8 @@ Sample conversion table:
 - "Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. The standard is maintained by the Unicode Consortium, and as of May 2019 the most recent version, Unicode 12.1, contains a repertoire of 137,994 characters (consisting of 137,766 graphic characters, 163 format characters and 65 control characters) covering 150 modern and historic scripts, as well as multiple symbol sets and emoji" ([Wikipedia](https://en.wikipedia.org/wiki/Unicode))
 - [Click here](https://home.unicode.org/basic-info/overview) to learn more about the Unicode consortium
 
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-concepts.md) for the full list of key concepts and definitions for this lab.
+
 ## Comprehension Check
 
 <table>
@@ -216,7 +218,7 @@ For this section of the lab, you'll need to download three different text files:
   </tr>
   </table>
 
-## Key Terms
+## Key Concepts
 
 **File Manager (or File Browser)**
 - "A file manager or file browser is a computer program that provides a user interface to manage files and folders. The most common operations performed on files or groups of files include creating, opening (e.g. viewing, playing, editing or printing), renaming, copying, moving, deleting and searching for files, as well as modifying file attributes, properties and file permissions. Folders and files may be displayed in a hierarchical tree based on their directory structure" ([Wikipedia](https://en.wikipedia.org/wiki/File_manager))
@@ -240,7 +242,7 @@ For this section of the lab, you'll need to download three different text files:
   * `HTML` (hyper-text markup language)
   * `PNG` (portable network graphic)
 
-[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-concepts.md) for the full list of key concepts and definitions for this lab.
 
 ## Comprehension Check
 
@@ -307,7 +309,7 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
   </tr>
   </table>
 
-## Key Terms
+## Key Concepts
 
 **Color depth**
 - "Color depth, also known as bit depth, is either the number of bits used to indicate the color of a single pixel, or the number of bits used for each color component of a single pixel. Color depth expresses the precision with which the amount of each primary can be expressed; the other aspect is how broad a range of colors can be expressed (the gamut). The definition of both color precision and gamut is accomplished with a color encoding specification which assigns a digital code value to a location in a color space" ([Wikipedia](https://en.wikipedia.org/wiki/Color_depth))
@@ -318,7 +320,7 @@ The Mario example featured 8-bit and 16-bit color. If you've ever seen Red-Green
 **RGB color model**
 - "The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers" ([Wikipedia](https://en.wikipedia.org/wiki/RGB_color_model))
 
-[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-terms.md) for the full list of key terms and definitions for this lab.
+[Click here](https://github.com/kwaldenphd/bits-bytes/blob/main/key-concepts.md) for the full list of key concepts and definitions for this lab.
 
 ## Application
 
