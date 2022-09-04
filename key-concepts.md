@@ -1,4 +1,4 @@
-# Key Terms
+# Key Concepts
 
 **American Standard Code for Information Interchange (ASCII)**
 - "A character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, and other devices. Most modern character-encoding schemes are based on ASCII, although they support many additional characters" ([Wikipedia](https://en.wikipedia.org/wiki/ASCII))
