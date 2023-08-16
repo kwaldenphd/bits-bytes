@@ -34,9 +34,9 @@ The "Binary Number Systems" and "Encoding Schema" lecture segments were adapted 
 - [Physical, Logical & Conceptual Objects](#physical-logical--conceptual-objects)
 - [Binary Number Systems](#binary-number-systems)
 - [Encoding Schema](#encoding-schema)
-- [File Formats](#file-formats)
 - [Representing Other Information in Binary](#representing-other-information-in-binary)
 - [Putting It All Together](#putting-it-all-together)
+- [File Formats](#file-formats)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 ## Lecture & Live Coding
